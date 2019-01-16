@@ -1,0 +1,30 @@
+{
+  "name": "serveurpfp",
+  "version": "1.0.0",
+  "description": "pfp club",
+  "scripts": {
+    "pfpclub": "npm start --prefix pfpclub",
+    "start": "nodemon app.js",
+    "server": "app.js",
+    "dev": "concurrently \"npm run server\" \"npm run pfpclub\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaroTrd/pfpclub.git"
+  },
+  "keywords": [
+    "pfpclub"
+  ],
+  "author": "wilders",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "nodemailer": "^5.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
