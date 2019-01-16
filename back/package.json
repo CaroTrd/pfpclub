@@ -6,6 +6,7 @@
     "pfpclub": "npm start --prefix pfpclub",
     "start": "nodemon app.js",
     "server": "app.js",
+    "heroku-postbuild": "npm install husky --save-dev",
     "dev": "concurrently \"npm run server\" \"npm run pfpclub\""
   },
   "repository": {
