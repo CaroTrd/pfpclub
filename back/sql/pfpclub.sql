@@ -24,7 +24,7 @@ CREATE TABLE `companies` (
 	`vat_numbr` varchar(100) NOT NULL UNIQUE,
 	`email` varchar(100) NOT NULL UNIQUE,
 	`phone` varchar(15) NOT NULL,
-	`address` TEXT(150) NOT NULL,
+	`address` varchar(150) NOT NULL,
 	`city` varchar(150) NOT NULL,
 	`municipality` varchar(90) NOT NULL,
 	`zip_code` varchar(16) NOT NULL,
