@@ -30,6 +30,7 @@ CREATE TABLE `companies` (
 	`zip_code` varchar(16) NOT NULL,
 	`country` varchar(50) NOT NULL,
 	`website` varchar(100) NOT NULL UNIQUE,
+	description text,
 	`logo` varchar(200) NOT NULL,
 	`company_status` tinyint(1) NOT NULL DEFAULT '0',
 	PRIMARY KEY (`company_id`)
@@ -48,6 +49,7 @@ CREATE TABLE `partners` (
 	`affiliation_end_date` DATE NOT NULL,
 	`company_id` int NOT NULL,
 	`partnership_type` int(10) NOT NULL,
+	offer text,
 	FOREIGN KEY (`company_id`) REFERENCES `companies`(`company_id`),
 	FOREIGN KEY (`partnership_type`) REFERENCES `partners_types`(`partnership_type_id`),
 	PRIMARY KEY (`partner_id`)
