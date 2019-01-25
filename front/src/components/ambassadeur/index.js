@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 
 class Ambassadeur extends Component {
   constructor(props) {
@@ -20,6 +21,7 @@ class Ambassadeur extends Component {
           <li> Contact details: </li>
         </ul>
         <p> Text </p>
+        <NavLink to="/about-this-ambassador"> More </NavLink>
       </div>
     );
   }
