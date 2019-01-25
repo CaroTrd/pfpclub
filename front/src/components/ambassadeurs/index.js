@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import AmbassadeursList from '../ambassadeurslist';
 
 class Ambassadeurs extends Component {
   constructor(props) {
@@ -12,6 +12,7 @@ class Ambassadeurs extends Component {
       <div>
         <h1> Les Ambassadeurs </h1>
         <p> Textes de presetation </p>
+        <AmbassadeursList />
       </div>
     );
   }
