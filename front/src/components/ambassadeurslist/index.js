@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Ambassadeur from '../ambassadeur/index';
 
 class AmbassadeursList extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class AmbassadeursList extends Component {
     return (
       <div>
         <p> Ambassadeurs list </p>
+        <Ambassadeur />
       </div>
     );
   }
