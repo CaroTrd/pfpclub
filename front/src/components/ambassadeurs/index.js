@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AmbassadeursList from '../ambassadeurslist';
+import AmbassadeursList from '../ambassadeurslist/index';
 
 class Ambassadeurs extends Component {
   constructor(props) {

@@ -4,14 +4,16 @@ import Ambassadeur from '../ambassadeur/index';
 class AmbassadeursList extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+    };
   }
 
   render() {
     return (
       <div>
-        <p> Ambassadeurs list </p>
-        <Ambassadeur />
+        <ul>
+          <Ambassadeur />
+        </ul>
       </div>
     );
   }
