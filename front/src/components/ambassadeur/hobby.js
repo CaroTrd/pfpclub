@@ -9,17 +9,22 @@ class Hobby extends Component {
     };
   }
 
+  componentDidMount() {
+    console.log('ici', this.hobby);
+  }
+
   render() {
     return (
       <div>
         <p>
-          {this.props.hobby_name}
+          {' '}
+          {this.props.hobby}
         </p>
       </div>
     );
   }
 }
 
-const mapStateToProps = state => ({ items: state.items });
+const mapStateToProps = state => ({ hobby: state.hobby_name });
 
 export default connect(mapStateToProps)(Hobby);

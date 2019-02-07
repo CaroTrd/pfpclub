@@ -1,10 +1,9 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+import { NavLink /* , withRouter */ } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ambassadorsReducers from '../../actions/index';
-import Hobby from './hobby';
 
 class Ambassadeur extends Component {
   constructor(props) {
@@ -48,12 +47,9 @@ class Ambassadeur extends Component {
         <p>
           {elem.email}
         </p>
-        <BrowserRouter>
-          <div>
-            <NavLink to={`/hobby/${elem.hobby_name}`}> See more </NavLink>
-            <Route path={`/hobby/${elem.hobby_name}`} component={Hobby} />
-          </div>
-        </BrowserRouter>
+        <div>
+          <NavLink to={`/hobby/${elem.hobby_name}`}> See more </NavLink>
+        </div>
       </li>
     ));
 
@@ -68,5 +64,7 @@ class Ambassadeur extends Component {
 }
 
 const mapDispatchToProps = dispatch => bindActionCreators({ ambassadorsReducers }, dispatch);
+
+// const ambassadors = withRouter(Ambassadeur);
 
 export default connect(null, mapDispatchToProps)(Ambassadeur);

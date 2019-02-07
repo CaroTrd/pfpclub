@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+import {
+  BrowserRouter, Route, Switch, NavLink,
+} from 'react-router-dom';
 import Ambassadors from './components/ambassadeurs';
+import Hobby from './components/ambassadeur/hobby';
 
 class App extends Component {
   constructor(props) {
@@ -14,8 +17,12 @@ class App extends Component {
     return (
       <div className="App">
         <p> App</p>
+        <NavLink to="/hobby" />
         <BrowserRouter>
-          <Route path="/ambassadors" component={Ambassadors} />
+          <Switch>
+            <Route exact path="/ambassadors" component={Ambassadors} />
+            <Route exact path="/hobby/:hobby_name" component={Hobby} />
+          </Switch>
         </BrowserRouter>
       </div>
     );
