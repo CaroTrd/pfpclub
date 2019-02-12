@@ -1,8 +1,12 @@
-const ambassadorsReducers = info => (
+export const saveAmbassadors = info => (
   {
     type: 'SAVEAMB',
     payload: info,
   }
 );
 
-export default ambassadorsReducers;
+export const envoiId = element => ({
+  type: 'ENVOI',
+  payload: element,
+}
+);

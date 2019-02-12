@@ -1,11 +1,11 @@
-const defaultState = ['test'];
 
-const ambassadorsReducers = (state = defaultState, action) => {
+
+const ambassadorsReducers = (state = [], action) => {
   switch (action.type) {
     case 'SAVEAMB':
       return [
         ...state,
-        action.payload,
+        ...action.payload,
       ];
     default:
       return state;

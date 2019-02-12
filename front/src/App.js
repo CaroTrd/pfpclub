@@ -21,7 +21,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/ambassadors" component={Ambassadors} />
-            <Route exact path="/hobby/:hobby_name" component={Hobby} />
+            <Route path="/ambassadors/:hobby_id" component={Hobby} />
           </Switch>
         </BrowserRouter>
       </div>

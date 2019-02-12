@@ -1,5 +1,4 @@
 /* eslint-disable */
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -10,7 +9,6 @@ import Store from './store/index';
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-   
    <Provider store={Store}>
       <BrowserRouter>
          <App />      

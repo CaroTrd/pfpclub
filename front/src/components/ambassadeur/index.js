@@ -1,9 +1,9 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
-import { NavLink /* , withRouter */ } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import ambassadorsReducers from '../../actions/index';
+import { saveAmbassadors, envoiId } from '../../actions/index';
 
 class Ambassadeur extends Component {
   constructor(props) {
@@ -26,31 +26,33 @@ class Ambassadeur extends Component {
   }
 
   componentDidUpdate() {
-    this.props.ambassadorsReducers(this.state.ambassadors);
+    this.props.saveAmbassadors(this.state.ambassadors.reverse());
   }
 
   render() {
     const ambassadorsItem = this.state.ambassadors.map(elem => (
-      <li>
-        <h2>
-          {elem.hobby_name}
-        </h2>
-        <p>
-          {elem.first_name}
-        </p>
-        <p>
-          {elem.last_name}
-        </p>
-        <p>
-          {elem.phone}
-        </p>
-        <p>
-          {elem.email}
-        </p>
-        <div>
-          <NavLink to={`/hobby/${elem.hobby_name}`}> See more </NavLink>
-        </div>
-      </li>
+      <div key={elem.hobby_id}>
+        <li>
+          <h2>
+            {elem.hobby_name}
+          </h2>
+          <p>
+            {elem.first_name}
+          </p>
+          <p>
+            {elem.last_name}
+          </p>
+          <p>
+            {elem.phone}
+          </p>
+          <p>
+            {elem.email}
+          </p>
+          <div>
+            <NavLink to={`/ambassadors/${elem.hobby_id}`}> See more </NavLink>
+          </div>
+        </li>
+      </div>
     ));
 
     return (
@@ -63,8 +65,6 @@ class Ambassadeur extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ ambassadorsReducers }, dispatch);
-
-// const ambassadors = withRouter(Ambassadeur);
+const mapDispatchToProps = dispatch => bindActionCreators({ saveAmbassadors, envoiId }, dispatch);
 
 export default connect(null, mapDispatchToProps)(Ambassadeur);
