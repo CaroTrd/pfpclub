@@ -1,0 +1,32 @@
+.header{
+    height: 100vh;
+    background-color: rgb(192, 62, 62);
+    position: relative;
+    }
+    
+    .header__elements{
+    position: absolute;
+    margin-top: 50vh;
+    margin-left: 50vw;
+    transform: translate(-50% , -50%);
+    }
+    
+    .title-h1{
+    text-transform: uppercase;
+    }
+
+    div .container {
+        width: 90%;
+        height: 100%;
+    }
+    
+    .titre {
+        display: flex;
+        align-items: flex-start;
+        font-size: 50px;
+    }
+    
+    .text {
+        font-size: 20px;
+        text-align: left;
+    }
