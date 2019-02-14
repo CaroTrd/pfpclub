@@ -1,0 +1,24 @@
+.search{
+    width: 250px;
+    margin-left: 2em;
+    height: 50px;
+    border: none;
+    box-sizing: border-box;
+    padding: 10px;
+    color: #fff;
+    font-size: 18px;
+    background-color: #4F6877;
+}
+
+.search::placeholder {
+    color: rgba(256, 256,256, .5);
+  }
+
+.search_title{
+    float: right;
+    padding-left: 2em;
+}
+
+.search-container{
+   
+}

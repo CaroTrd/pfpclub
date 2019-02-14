@@ -1,0 +1,13 @@
+.select{
+    padding: 10px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    background-color: #4F6877;
+}
+ 
+.filter-container{
+}
