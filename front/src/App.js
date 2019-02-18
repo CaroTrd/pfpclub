@@ -1,3 +1,6 @@
+/* eslint-disable */
+
+
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './logo.svg';
@@ -25,7 +28,7 @@ class App extends Component {
 
   render() {
     return (
-      // eslint-disable-next-line react/jsx-filename-extension
+      /* eslint-disable */
       <div className="App">
         <BrowserRouter>
           <div>
