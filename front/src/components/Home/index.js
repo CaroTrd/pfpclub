@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
-import Partners from '../Partners/Partnerslevel/index';
 import './index.css';
 
 class Home extends Component {
@@ -67,7 +66,6 @@ class Home extends Component {
             nec tempus elit.
           </p>
         </div>
-        <Partners pageName="home" />
       </div>
     );
   }
