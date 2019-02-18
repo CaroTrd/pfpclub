@@ -3,34 +3,23 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { saveAmbassadors, envoiId } from '../../actions/index';
+import { getAmbassador, envoiId } from '../../actions/index';
 
 class Ambassadeur extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ambassadors: [],
     };
   }
 
   componentDidMount() {
-    fetch('/ambassadors')
-      .then(response => response.json())
-      .then((data) => {
-        this.setState(
-          {
-            ambassadors: data.results,
-          },
-        );
-      });
-  }
-
-  componentDidUpdate() {
-    this.props.saveAmbassadors(this.state.ambassadors.reverse());
+    if (this.props.ambassadors.length === 0) {
+      this.props.getAmbassador();
+    }
   }
 
   render() {
-    const ambassadorsItem = this.state.ambassadors.map(elem => (
+    const ambassadorsItem = [...this.props.ambassadors].reverse().map(elem => (
       <div key={elem.hobby_id}>
         <li>
           <h2>
@@ -65,6 +54,12 @@ class Ambassadeur extends Component {
   }
 }
 
-const mapDispatchToProps = dispatch => bindActionCreators({ saveAmbassadors, envoiId }, dispatch);
+const mapStateToProps = state => (
+  {
+    ambassadors: state.refreshReducer,
+  }
+);
 
-export default connect(null, mapDispatchToProps)(Ambassadeur);
+const mapDispatchToProps = dispatch => bindActionCreators({ getAmbassador, envoiId }, dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(Ambassadeur);
