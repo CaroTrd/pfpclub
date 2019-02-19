@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
-import './index.css';
+import './index.scss';
 
 class Home extends Component {
   render() {
@@ -13,59 +13,43 @@ class Home extends Component {
             <h1 className="title-h1">pfp club</h1>
             <p>Ceci n&apos;est pas un club (comme les autres)</p>
           </div>
+          <div className="mouse_scroll">
+            <div className="mouse">
+              <div className="wheel" />
+            </div>
+            <div>
+              <span className="m_scroll_arrows unu" />
+            </div>
+            <p className="scroll-down">scroll down</p>
+          </div>
         </div>
-        <div className="container">
-          <h1 className="titre">Accueil</h1>
-          <p className="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in condimentum tellus.
-            Etiam dolor purus, condimentum quis volutpat at, placerat et dui. Proin tellus tellus, ornare non sodales volutpat,
-            feugiat a urna. Etiam at luctus ante, eu pellentesque mauris. Nam pharetra neque ac arcu ullamcorper, id lacinia sem aliquam.
-            Aenean aliquam enim at nibh venenatis lacinia. Maecenas vulputate faucibus est, vel maximus enim lobortis quis. Sed scelerisque
-            augue facilisis lorem facilisis sollicitudin. Fusce hendrerit elit augue, nec elementum nunc scelerisque eget. Ut condimentum dolor quam,
-            in dignissim tortor molestie in. In in dignissim odio, id feugiat metus.
-
-            Vivamus hendrerit congue augue sit amet scelerisque. Aenean pretium cursus sem et cursus. Duis at purus quis dui porta laoreet.
-            Sed pharetra dignissim placerat. Duis euismod odio vitae dictum congue. Pellentesque in elementum nulla. Sed rhoncus molestie metus,
-             vitae dignissim est rutrum et. Praesent in neque ac turpis aliquet pharetra in sit amet odio. Maecenas bibendum tellus a nulla sollicitudin,
-             et sollicitudin ipsum hendrerit. Sed facilisis tempus efficitur.
-
-            Donec id dolor nec nisl bibendum ornare. Vestibulum eu dolor neque. Vivamus et lectus a odio rhoncus gravida. Aenean sit amet gravida leo.
-            Mauris hendrerit mauris mi, nec auctor nibh ultrices eu. Cras efficitur libero sit amet porttitor ullamcorper. Duis vel enim volutpat, blandit
-            turpis nec, pellentesque mauris. Nunc lobortis feugiat tellus vitae venenatis. Vivamus diam tellus, ullamcorper nec lorem in, sollicitudin placerat eros.
-
-            Curabitur placerat consectetur eros a blandit. Morbi efficitur rhoncus elit eu blandit. Mauris eget nisi neque. Sed fermentum fermentum elit,
-            sit amet varius augue vulputate ut. Duis accumsan, nulla eget placerat scelerisque, elit lorem malesuada ligula, quis eleifend tortor leo eget quam.
-            Phasellus fringilla lectus vel ipsum ornare, vel hendrerit quam interdum. Proin dapibus ligula rutrum sapien molestie, quis bibendum quam sodales.
-            Donec nunc elit, luctus id malesuada nec, viverra sit amet elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc iaculis arcu nec
-            elit mollis, dictum facilisis tellus pharetra. Phasellus vel mauris ac turpis vulputate gravida maximus in orci. Duis porta turpis justo. Vestibulum
-             nec tempus elit.
-          </p>
-
-          <p className="text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque in condimentum tellus.
-            Etiam dolor purus, condimentum quis volutpat at, placerat et dui. Proin tellus tellus, ornare non sodales volutpat,
-            feugiat a urna. Etiam at luctus ante, eu pellentesque mauris. Nam pharetra neque ac arcu ullamcorper, id lacinia sem aliquam.
-            Aenean aliquam enim at nibh venenatis lacinia. Maecenas vulputate faucibus est, vel maximus enim lobortis quis. Sed scelerisque
-            augue facilisis lorem facilisis sollicitudin. Fusce hendrerit elit augue, nec elementum nunc scelerisque eget. Ut condimentum dolor quam,
-            in dignissim tortor molestie in. In in dignissim odio, id feugiat metus.
-
-            Vivamus hendrerit congue augue sit amet scelerisque. Aenean pretium cursus sem et cursus. Duis at purus quis dui porta laoreet.
-            Sed pharetra dignissim placerat. Duis euismod odio vitae dictum congue. Pellentesque in elementum nulla. Sed rhoncus molestie metus,
-            vitae dignissim est rutrum et. Praesent in neque ac turpis aliquet pharetra in sit amet odio. Maecenas bibendum tellus a nulla sollicitudin,
-            et sollicitudin ipsum hendrerit. Sed facilisis tempus efficitur.
-
-            Donec id dolor nec nisl bibendum ornare. Vestibulum eu dolor neque. Vivamus et lectus a odio rhoncus gravida. Aenean sit amet gravida leo.
-            Mauris hendrerit mauris mi, nec auctor nibh ultrices eu. Cras efficitur libero sit amet porttitor ullamcorper. Duis vel enim volutpat, blandit
-            turpis nec, pellentesque mauris. Nunc lobortis feugiat tellus vitae venenatis. Vivamus diam tellus, ullamcorper nec lorem in, sollicitudin placerat eros.
-
-            Curabitur placerat consectetur eros a blandit. Morbi efficitur rhoncus elit eu blandit. Mauris eget nisi neque. Sed fermentum fermentum elit,
-            sit amet varius augue vulputate ut. Duis accumsan, nulla eget placerat scelerisque, elit lorem malesuada ligula, quis eleifend tortor leo eget quam.
-            Phasellus fringilla lectus vel ipsum ornare, vel hendrerit quam interdum. Proin dapibus ligula rutrum sapien molestie, quis bibendum quam sodales.
-            Donec nunc elit, luctus id malesuada nec, viverra sit amet elit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc iaculis arcu nec
-            elit mollis, dictum facilisis tellus pharetra. Phasellus vel mauris ac turpis vulputate gravida maximus in orci. Duis porta turpis justo. Vestibulum
-            nec tempus elit.
-          </p>
-        </div>
+        <section className="section container">
+          <h2 className="title-h2 center">Bienvenue au nouveau club de Belgique</h2>
+          <div className="col-9 welcom__text">
+            <p>
+              Le PFP Club a comme objectif de fournir des services variés à ses membres par le
+              biais d’actions d’intérêt économique et culturel.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit. Sed eu metus libero. Sed eu volutpat dolor.
+              Integer justo eros, tempor vitae leo ornare, varius dictum quam. Nam sed
+              nisl turpis. Donec in consectetur dolor. Suspendisse pellentesque erat
+              libero, a rutrum tortor interdum eget. Maecenas scelerisque eleifend erat
+              eget ultricies. Aliquam bibendum mi in ligula commodo bibendum a interdum
+              lacus. Aliquam fermentum risus eu venenatis sodales. Sed nec aliquam lacus,
+              consectetur auctor mauris.
+            </p>
+            <div className="welcom__images">
+              <div className="corner corner--right">
+                <img src="http://via.placeholder.com/272x221" alt="" />
+              </div>
+              <div className="corner corner--right">
+                <img src="http://via.placeholder.com/272x221" alt="" />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     );
   }

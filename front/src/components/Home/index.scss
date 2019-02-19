@@ -1,0 +1,186 @@
+
+@import '../../assets/styles/typo.scss';
+.section{
+  padding: 2em 0;
+}
+.header{
+    height: 100vh;
+    background: url(../../assets/images/bg.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    }
+    
+    .header__elements{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    position: absolute;
+    top: 50vh;
+    width: 100%;
+    transform: translateY(-50%);
+    }
+    
+    .title-h1{
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0 auto;
+    &:after{
+        content: '';
+        width: 193px;
+        border: solid 2px $border-color;
+        display: inline-block;
+        margin-left: 10px;
+        margin-bottom: 25px;
+    }
+    }
+
+    .header__elements p{
+        font-family: $title-font;
+        font-size: 1.3125em;
+        color: $white;
+        margin: 0;
+        text-transform: uppercase;
+        &:before{
+            content: '';
+            width: 100px;
+            border: solid 2px #DBC4A2;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 0.1em;
+        }
+    }
+
+    .mouse_scroll {
+        position: absolute;
+        display: block;
+        bottom: 20px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        text-align:center;
+    }
+    
+    
+    .m_scroll_arrows
+    {
+      display: block;
+      width: 5px;
+      height: 5px;
+      transform: rotate(45deg);
+      border-right: 2px solid white;
+      border-bottom: 2px solid white;
+      margin: 0 0 3px 4px;
+      width: 16px;
+      height: 16px;
+    }
+    
+    
+    .unu
+    {
+      margin-top: 1px;
+      animation: mouse-scroll 1s infinite ease-in;
+      animation-direction: alternate;
+      margin: 0 auto;
+    }
+    
+    .mouse {
+    height: 31px;
+    width: 20px;
+    border-radius: 14px;
+    border: 2px solid white;
+    margin: 0 auto;
+    }
+    
+    .wheel {
+      display: block;
+      margin: 5px auto;
+      background: white;
+      position: relative;
+      height: 2px;
+      width: 2px;
+      border: 2px solid #fff;
+      border-radius: 7px;
+    }
+    
+    .wheel {
+      animation: mouse-wheel 1s linear infinite;
+    }
+    
+    
+    @keyframes mouse-wheel {
+    
+       0% { top: 1px; }
+      25% { top: 3px; }
+      50% { top: 5px;}
+      75% { top: 3px;}
+      100% { top: 1px;}
+    }
+    
+    @keyframes mouse-scroll {
+      0%   { opacity: .2; }
+      50%  { opacity: .5; }
+      100% { opacity: 1; }
+    }
+
+    .scroll-down{
+        color: $white;
+        text-transform: uppercase;
+        font-size: 0.625em;
+        text-align: center;
+    }
+
+/* ------ BIENVENUE AU NOUVEAU CLUB DE BELGIQUE ----------*/
+
+.center{
+  text-align: center;
+}
+
+.col-9{
+  width: 68.08333333333333%; // 817px
+ }
+
+ .corner{
+   border: 10px solid transparent;
+   position: relative;
+   width: 272px;
+   height: 221px;
+    &:before,&:after{
+      content: '';
+      width: 65px;
+      height: 65px;
+      border: solid 1.5px #DBC4A2;
+      position: absolute;
+    }
+    &:before{
+      border-bottom: transparent;
+      border-right: transparent;
+      top: -10px;
+      left: -10px;
+      margin-right: 10px;
+  }
+  &--right:after{
+      border-top: transparent;
+      border-left: transparent;
+      bottom: -10px;
+      right: -10px;
+      margin-left: 10px;
+  }
+}
+
+.welcom__text{
+  padding-top: 1em;
+  color:#999999;
+}
+.welcom__images{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1000px){
+  .welcom__text{
+    width: 90%;
+    margin: 0 auto;
+  }
+}

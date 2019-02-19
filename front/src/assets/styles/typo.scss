@@ -1,6 +1,7 @@
-@import './variable';
+@import 'variables';
 
 .title-h1{
+    text-transform: uppercase;
     font-family: $title-font;
     font-size: 4.938em;
     color: #fff;
@@ -8,6 +9,7 @@
 
 
 .title-h2{
+    text-transform: uppercase;
     font-family: $title-font;
     font-size: 1.5em;
     color: #222222;
@@ -18,13 +20,6 @@
         }
 }
 
-.node{
-    &:after{
-        content: url(../images/bow.svg);
-        width: 40px;
-    }
-}
-
 p{
     font-family: $body-font;
     font-size: 0.875em;
@@ -32,15 +27,6 @@ p{
 
 a{
     font-family: $title-font;
-}
-
-@font-face{
-    @font-face {
-        font-family: 'Noteworthy Light';
-        font-style: normal;
-        font-weight: normal;
-        src: local('Noteworthy Light'), url(../fonts/Noteworthy-Lt.woff) format('woff');
-        }
 }
 
 $quote-font: 'Noteworthy Light';
