@@ -1,46 +1,31 @@
-@import './variable';
+@import "./variables";
 
-.title-h1{
-    font-family: $title-font;
-    font-size: 4.938em;
-    color: #fff;
+.title-h1 {
+  font-family: $title-font;
+  font-size: 4.938em;
+  color: #fff;
 }
 
-
-.title-h2{
+.title-h2 {
+  font-family: $title-font;
+  font-size: 1.5em;
+  color: #222222;
+  &--light {
     font-family: $title-font;
     font-size: 1.5em;
-    color: #222222;
-        &--light{
-            font-family: $title-font;
-            font-size: 1.5em;
-            color: #EAEAEA;
-        }
+    color: #eaeaea;
+  }
 }
 
-.node{
-    &:after{
-        content: url(../images/bow.svg);
-        width: 40px;
-    }
+p {
+  font-family: $body-font;
+  font-size: 0.875em;
 }
 
-p{
-    font-family: $body-font;
-    font-size: 0.875em;
+link {
+  font-family: $title-font;
 }
-
-a{
-    font-family: $title-font;
+.node {
+  content: url(../images/bow.svg);
+  width: 40px;
 }
-
-@font-face{
-    @font-face {
-        font-family: 'Noteworthy Light';
-        font-style: normal;
-        font-weight: normal;
-        src: local('Noteworthy Light'), url(../fonts/Noteworthy-Lt.woff) format('woff');
-        }
-}
-
-$quote-font: 'Noteworthy Light';
