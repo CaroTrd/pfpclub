@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
-import './index.css';
+import './index.scss';
 
 class Navbar extends Component {
   constructor(props) {
