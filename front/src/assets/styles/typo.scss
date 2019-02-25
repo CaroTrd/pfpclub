@@ -1,4 +1,4 @@
-@import './variable';
+@import './variables.scss';
 
 .title-h1{
     font-family: $title-font;
@@ -18,6 +18,12 @@
         }
 }
 
+.members-info{
+    font-family: $body-font-membersInfo;
+    font-size: 1.2em;
+    color: #222222;
+}
+
 .node{
     &:after{
         content: url(../images/bow.svg);
@@ -33,14 +39,3 @@ p{
 a{
     font-family: $title-font;
 }
-
-@font-face{
-    @font-face {
-        font-family: 'Noteworthy Light';
-        font-style: normal;
-        font-weight: normal;
-        src: local('Noteworthy Light'), url(../fonts/Noteworthy-Lt.woff) format('woff');
-        }
-}
-
-$quote-font: 'Noteworthy Light';

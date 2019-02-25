@@ -22,10 +22,7 @@ node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-<<<<<<< HEAD
 
 /helpers
 conf.js
 .conf.js
-=======
->>>>>>> 58015d7a93bc6ef588833188568ef5f10628c2c7

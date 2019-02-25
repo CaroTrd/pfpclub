@@ -1,0 +1,42 @@
+.ambassador-div {
+    border: #E5E4E2 solid 2px;
+    margin: 26px;
+}
+
+.ambassador-category-position {
+    background-color: white;
+    max-width: 7em;
+    margin: 0;
+    top: 100px;
+    left: 4px;
+    margin: 30px;
+    position: relative;
+}
+
+.wrapper {
+    max-width: 66%;
+    margin: auto;
+}
+
+.ambassadors-ul {
+    margin: 0;
+    padding: 0;
+}
+
+.ambassadors-ul-li {
+    list-style: none;
+}
+
+.ambassador-picture {
+    max-width: 160px;
+    max-height: 160px;
+    position: relative;
+    left: -34%;
+    top: 1.5em;
+}
+
+.ambassador-infoList {
+    position: relative;
+    top: -8em;
+    left: 26.5%;
+}

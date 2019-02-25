@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AmbassadeursList from '../ambassadeurslist/index';
-import './index.css';
+import '../../assets/styles/typo.scss';
 
 class Ambassadeurs extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class Ambassadeurs extends Component {
 
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <h1 className="title-h2"> Les Ambassadeurs </h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
