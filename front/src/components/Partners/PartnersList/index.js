@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PartnersElements from './PartnersElements/index';
-import './index.css';
+import './index.scss';
 
 class partnersList extends Component {
   constructor(props) {
@@ -83,24 +83,34 @@ class partnersList extends Component {
 
 
     return (
-      <div className="">
-        <ul className="partners-ul partners-ul--platinium ">
-          <span>Platinium</span>
-          {partnersElementsPlatinium}
-        </ul>
-        <ul className="partners-ul partners-ul--gold">
-          <span>Gold</span>
-          {partnersElementsGold}
-        </ul>
-        <ul className="partners-ul partners-ul--silver">
-          <span>Sivler</span>
-          {partnersElementsSilver}
-        </ul>
-        <ul className="partners-ul partners-ul--bronze">
-          <span>Bronze</span>
-          {partnersElementsBronze}
-        </ul>
-      </div >
+      <React.Fragment>
+        <section className="container section__partners__list">
+          <div className="partners__platinium partners__list__container ">
+            <ul className="partners-ul">
+              <h2 className="title-h2 level-name">Platinium</h2>
+              {partnersElementsPlatinium}
+            </ul>
+          </div>
+          <div className="partners__gold partners__list__container">
+            <ul className="partners-ul">
+              <h2 className="title-h2 level-name">Gold</h2>
+              {partnersElementsGold}
+            </ul>
+          </div>
+          <div className="partners__silver partners__list__container">
+            <ul className="partners-ul">
+              <h2 className="title-h2 level-name">Sivler</h2>
+              {partnersElementsSilver}
+            </ul>
+          </div>
+          <div className="partners__bronze partners__list__container">
+            <ul className="partners-ul">
+              <h2 className="title-h2 level-name">Bronze</h2>
+              {partnersElementsBronze}
+            </ul>
+          </div>
+        </section>
+      </React.Fragment>
     );
   }
 }

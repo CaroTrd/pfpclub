@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './index.css';
+import './index.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { savedCategoryAction } from '../../Redux/Actions/index';
@@ -31,12 +31,10 @@ class selectCategory extends Component {
       <option className="select__option" value={test.categrory_name} key={test.category_id}>{test.category_name}</option>
     ));
     return (
-      <div className="filter-container">
-        <select onChange={e => this.setState({ category: e.target.value })} className="select" name="cars" id="mySlect">
-          <option className="select__option" value="all">all</option>
-          {info}
-        </select>
-      </div>
+      <select onChange={e => this.setState({ category: e.target.value })} className="input-partners" name="cars" id="mySlect">
+        <option className="select__option" value="all">Catégories</option>
+        {info}
+      </select>
     );
   }
 }
@@ -48,7 +46,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({savedCategoryAction} , dispatch);
+  return bindActionCreators({ savedCategoryAction }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(selectCategory);

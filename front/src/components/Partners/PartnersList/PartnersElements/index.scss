@@ -1,0 +1,45 @@
+@import '../../../../assets/styles/variables.scss';
+
+.partners-li{
+    list-style: none;
+}
+
+
+.partners-li__container{
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+
+.partners-li_container_text{
+    padding: 1.5em 2em;
+    & p{
+        margin-bottom: 0;
+    }
+}
+
+.title-partners{
+    font-family: $body-font;
+    margin-bottom: .5em;
+    margin-top: 0;
+}
+
+.partners-li__container__img{
+    width: 160px;
+    min-width: 160px;
+    height:160px ;
+}
+.helper{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+.partners-img{
+    vertical-align: middle;
+    max-width: 160px;
+}
+
+.category_name{
+    margin: 0;
+    font-weight: 500;
+}

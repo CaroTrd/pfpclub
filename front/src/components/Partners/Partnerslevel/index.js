@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withRouter } from 'react-router-dom';
 import { fetchPartners } from '../../Redux/Actions/index';
-import '../index.css';
+
 
 class PartnersList extends Component {
   constructor(props) {

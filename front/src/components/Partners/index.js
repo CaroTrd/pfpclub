@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import SelectCategory from './SelectCategory/index';
 import UserType from './UserType/index';
 import PartnersList from './PartnersList/index';
-import './index.css';
+import './index.scss';
 
 class PartnersPage extends Component {
   constructor(props) {
@@ -13,11 +13,30 @@ class PartnersPage extends Component {
 
   render() {
     return (
-      <div className="partners_container">
-        <h1 className="partners-title">Partners Page</h1>
+      <div className="partners__container">
+        <div className="container">
+          <div className="partners__intro">
+            <h1 className="title-h2">Partners Page</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Sed eu metus libero. Sed eu volutpat dolor. Integer
+              justo eros, tempor vitae leo ornare, varius dictum quam.
+              Nam sed nisl turpis. Donec in consectetur dolor. Suspendisse
+              pellentesque erat libero, a rutrum tortor interdum eget.
+              Maecenas scelerisque eleifend erat eget ultricies. Aliquam
+              bibendum mi in ligula commodo bibendum a interdum lacus.
+              Aliquam fermentum risus eu venenatis sodales. Sed nec
+              aliquam lacus, consectetur auctor mauris.
+            </p>
+          </div>
+        </div>
         <div className="partners_filter">
-          <SelectCategory />
-          <UserType />
+          <div className="container">
+            <div className="partners__filter__flex">
+              <SelectCategory />
+              <UserType />
+            </div>
+          </div>
         </div>
         <PartnersList />
       </div>
