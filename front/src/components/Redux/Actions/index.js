@@ -1,8 +1,7 @@
 // ambassadors
 
-export const ambassadorsReducer = info => (
-  {
-    type: 'AMBASSADOR',
-    payload: info,
-  }
-);
+const ambassadorsReducer = info => ({
+  type: 'AMBASSADOR',
+  payload: info,
+});
+export default ambassadorsReducer;

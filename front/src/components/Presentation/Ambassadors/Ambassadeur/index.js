@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { NavLink /* , withRouter */ } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { ambassadorsReducer } from '../../../Redux/Actions/index';
+import ambassadorsReducer from '../../../Redux/Reducers/Ambassadors/index';
 
 class Ambassadeur extends Component {
   constructor(props) {
@@ -17,11 +17,9 @@ class Ambassadeur extends Component {
     fetch('/api/ambassadors/ambassadors')
       .then(response => response.json())
       .then((data) => {
-        this.setState(
-          {
-            ambassadors: data.results,
-          },
-        );
+        this.setState({
+          ambassadors: data.results,
+        });
       });
   }
 
@@ -32,21 +30,11 @@ class Ambassadeur extends Component {
   render() {
     const ambassadorsItem = this.state.ambassadors.map(elem => (
       <li>
-        <h2>
-          {elem.hobby_name}
-        </h2>
-        <p>
-          {elem.first_name}
-        </p>
-        <p>
-          {elem.last_name}
-        </p>
-        <p>
-          {elem.phone}
-        </p>
-        <p>
-          {elem.email}
-        </p>
+        <h2>{elem.hobby_name}</h2>
+        <p>{elem.first_name}</p>
+        <p>{elem.last_name}</p>
+        <p>{elem.phone}</p>
+        <p>{elem.email}</p>
         <div>
           <NavLink to={`/hobby/${elem.hobby_name}`}> See more </NavLink>
         </div>
@@ -55,9 +43,7 @@ class Ambassadeur extends Component {
 
     return (
       <div>
-        <ul>
-          {ambassadorsItem}
-        </ul>
+        <ul>{ambassadorsItem}</ul>
       </div>
     );
   }
@@ -67,4 +53,7 @@ const mapDispatchToProps = dispatch => bindActionCreators({ ambassadorsReducer }
 
 // const ambassadors = withRouter(Ambassadeur);
 
-export default connect(null, mapDispatchToProps)(Ambassadeur);
+export default connect(
+  null,
+  mapDispatchToProps,
+)(Ambassadeur);

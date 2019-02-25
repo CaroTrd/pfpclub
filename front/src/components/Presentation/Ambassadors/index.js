@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 /* global fetch:false */
-
 class Ambassador extends Component {
   constructor(props) {
     super(props);

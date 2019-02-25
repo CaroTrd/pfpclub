@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import AmbassadeursList from '../Ambassadeurslist/index';
-import Partners from '../../../Partners/Partnerslevel/index';
 
 class Ambassadeurs extends Component {
   constructor(props) {
@@ -14,7 +13,6 @@ class Ambassadeurs extends Component {
         <h1> Les Ambassadeurs </h1>
         <p> Textes de presetation </p>
         <AmbassadeursList />
-        <Partners />
       </div>
     );
   }
