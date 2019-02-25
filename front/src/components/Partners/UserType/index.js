@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './index.css';
+import './index.scss';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { savedSearchAction } from '../../Redux/Actions/index';
@@ -18,11 +18,9 @@ class PartnersSearchBar extends Component {
 
   render() {
     return (
-      <div className="search-container">
-        <div>
-          <input onChange={e => this.setState({ userValue: e.target.value })} className="search" type="text" placeholder="Search.." />
-        </div>
-      </div>
+      <span className="search-logo">
+        <input onChange={e => this.setState({ userValue: e.target.value })} className="input-partners" type="text" placeholder="Recherche" />
+      </span>
     );
   }
 }
