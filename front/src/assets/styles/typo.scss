@@ -24,13 +24,6 @@
     color: #222222;
 }
 
-.node{
-    &:after{
-        content: url(../images/bow.svg);
-        width: 40px;
-    }
-}
-
 p{
     font-family: $body-font;
     font-size: 0.875em;

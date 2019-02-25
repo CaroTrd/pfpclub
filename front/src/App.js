@@ -16,7 +16,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p> App</p>
         <NavLink to="/hobby" />
         <BrowserRouter>
           <Switch>
