@@ -40,7 +40,7 @@ class NewMember extends Component {
               const members = elem.member_id === (this.state.next) ? 'list--members' : 'shadow';
               return (
                 <li className={members} key={elem.member_id}>
-                  <p className="text corner">
+                  <p className="text corner-member">
                     {elem.text}
                   </p>
                   <div className="foto">

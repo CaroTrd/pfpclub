@@ -25,6 +25,11 @@
   color: #999999;
 }
 
+.node{
+  content: url(../images/bow.svg);
+  width: 40px;
+}
+
 p {
   font-family: $body-font;
   font-size: 0.875em;
@@ -33,7 +38,4 @@ p {
 link {
   font-family: $title-font;
 }
-.node {
-  content: url(../images/bow.svg);
-  width: 40px;
-}
+
