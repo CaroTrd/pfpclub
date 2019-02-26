@@ -17,6 +17,14 @@
   }
 }
 
+.text{
+  font-family: $body-font;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  color: #999999;
+}
+
 p {
   font-family: $body-font;
   font-size: 0.875em;

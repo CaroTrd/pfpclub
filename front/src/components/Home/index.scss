@@ -1,20 +1,6 @@
 @import "../../assets/styles/variables.scss";
-.header {
-  height: 100vh;
-  background-color: rgb(192, 62, 62);
-  position: relative;
-}
 
-.header__elements {
-  position: absolute;
-  margin-top: 50vh;
-  margin-left: 50vw;
-  transform: translate(-50%, -50%);
-}
-
-.title-h1 {
-  text-transform: uppercase;
-}
+// Advantage in Home
 
 #avantages {
   padding-top: 2em;
@@ -28,7 +14,7 @@
   flex-wrap: wrap;
 }
 
-#avantages h2 {
+.style_texte {
   text-align: center;
   color: white;
 }
@@ -41,16 +27,24 @@
   position: absolute;
   top: -10%;
   left: 43%;
-  border: white solid;
+  border: white solid 1px;
   color: white;
   font-size: 24px;
 }
+
+.list-advantages{
+    font-family: $title-font;
+    font-size: 16px;
+    color: #3A3A3A;
+    text-align: center;
+}
+
 .titre {
   display: flex;
   align-items: flex-start;
   font-size: 50px;
 }
-.text {
+.carte {
   background-color: rgba(255, 255, 255, 0.6);
   width: 100%;
   box-sizing: border-box;
@@ -60,7 +54,7 @@
   padding-bottom: 60px;
 }
 
-.card {
+.cards {
   font-size: 20px;
   position: relative;
   box-sizing: border-box;
@@ -71,18 +65,18 @@
   flex-direction: column;
   justify-content: space-between;
 
-  .text {
+  .carte {
     margin-bottom: 15px;
   }
 }
-.button {
+.apply {
   background-color: $main-color--light;
   border: white solid;
   padding: 15px;
   position: center;
   display: inline-block;
 }
-.button a {
+.apply a {
   text-decoration: none;
   color: white;
   font-size: 20px;
@@ -92,10 +86,10 @@
   justify-content: center;
   height: 35px;
 
-  }
+}
   
 
-@media screen and (max-width: 1200px) {
+/* @media screen and (max-width: 1200px) {
   .row {
     flex-direction: column;
     justify-content: center;
@@ -107,4 +101,130 @@
     width: 70%;
     margin-bottom: 4em;
   }
+} */
+
+// Home
+
+.container_member{
+  width: 956px;
+  margin: 0 auto;
 }
+
+// Home member page
+  
+  .title-h2{
+      display: flex;
+      justify-content: center;
+  }
+
+  .bowtie {
+      display: flex;
+      justify-content: center;
+      height: 29.39px;
+  }
+
+  .list--members{
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .corner{
+      border: 10px solid transparent;
+      position: relative;
+      &:before,&:after{
+      content: '';
+      width: 65px;
+      height: 65px;
+      border: solid 1.5px #DBC4A2;
+      position: absolute;
+      }
+      &:before{
+          content: '';
+          width: 65px;
+          height: 65px;
+          border: solid 1.5px #DBC4A2;
+          position: absolute;
+          border-bottom: transparent;
+          border-right: transparent;
+          top: -10px;
+          left: -10px;
+          margin-right: 10px;
+      }
+      &:after{
+          content: '';
+          border-top: transparent;
+          border-left: transparent;
+          bottom: -10px;
+          right: -10px;
+          margin-left: 10px;
+      }
+  }
+
+  .foto{
+      display: flex;
+      justify-content: center;
+      height: 47px;
+      & .profil{
+          width: 47px;
+          border-radius: 15px;
+      }
+  }
+
+  .name_member{
+      font-family: $name-font;
+      color: #AA723B;
+      display: flex;
+      justify-content: center;
+  }
+
+  .shadow{
+      display: none;
+  }
+
+  .slider {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      left: 43%;
+      width: 7%;
+  }
+
+  .slide{
+      width: 3px;
+      height: 14px;
+      border: 1px solid #AA723B;
+      border-radius: 100%;
+      background-color:#AA723B;
+  }
+
+  .none {
+      width: 3px;
+      height: 14px;
+      border: 1px solid #D7D7D7;
+      border-radius: 100%;
+      background-color: #D7D7D7;
+  }
+
+  @media screen and (min-width: 472px){
+      .slider {
+          left: 45%;
+      }
+  }
+  @media screen and (min-width: 890px){
+      .slider {
+          left: 46.3%;
+      }
+  }
+
+@media screen and (max-width: 1200px){
+  .container_member{
+      width: 90%;
+  }
+}
+
