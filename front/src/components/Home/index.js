@@ -2,6 +2,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import './index.scss';
+import '../../assets/styles/typo.scss';
 
 class Home extends Component {
   render() {
@@ -40,13 +41,13 @@ class Home extends Component {
               lacus. Aliquam fermentum risus eu venenatis sodales. Sed nec aliquam lacus,
               consectetur auctor mauris.
             </p>
-            <div className="welcom__images">
-              <div className="corner corner--right">
-                <img src="http://via.placeholder.com/272x221" alt="" />
-              </div>
-              <div className="corner corner--right">
-                <img src="http://via.placeholder.com/272x221" alt="" />
-              </div>
+          </div>
+          <div className="welcom__images">
+            <div className="corner corner--right">
+              <img src="http://via.placeholder.com/272x221" alt="" />
+            </div>
+            <div className="corner corner--right">
+              <img src="http://via.placeholder.com/272x221" alt="" />
             </div>
           </div>
         </section>

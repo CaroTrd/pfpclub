@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import Home from './components/Home/index';
 import './App.css';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    this.state = {};
   }
 
   render() {
