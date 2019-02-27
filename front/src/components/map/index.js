@@ -1,45 +1,51 @@
-/* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prefer-stateless-function */
-import React, { Component } from 'react';
-import GoogleMapReact from 'google-map-react';
-import icon from './pins.png';
+import React from 'react';
+import { compose, withProps } from 'recompose';
 
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
-const Marker = ({ img }) => <div><img src={icon} alt="ici" width="30" heigth="40" /></div>;
+import {
+  withScriptjs, withGoogleMap, GoogleMap, Marker,
+} from 'react-google-maps';
 
-class SimpleMap extends Component {
-  static defaultProps = {
-    center: {
-      lat: 0,
-      lng: 0,
-    },
+import pin from './pins2.png';
 
-    zoom: 18,
-  };
+const MyMapComponent = compose(
+  withProps({
+    googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I&v=3.exp&libraries=geometry,drawing,places',
+    loadingElement: <div style={{ height: '100%' }} />,
+    containerElement: <div className="map-container" style={{ height: '400px' }} />,
+    mapElement: <div className="map" style={{ height: '100%' }} />,
+  }),
+  withScriptjs,
+  withGoogleMap,
+)(() => (
+  <GoogleMap
+    defaultZoom={18}
+    defaultCenter={{ lat: 50.822239, lng: 4.383707 }}
+  >
+    <Marker key="marker" icon={{ url: pin, scale: 10 }} position={{ lat: 50.822239, lng: 4.383707 }} />
+  </GoogleMap>
+));
+
+class MyFancyComponent extends React.PureComponent {
+  componentDidMount() {
+    this.delayedShowMarker();
+  }
+
+  delayedShowMarker = () => {
+    setTimeout(() => {
+    }, 3000);
+  }
+
+  handleMarkerClick = () => {
+    this.delayedShowMarker();
+  }
 
   render() {
     return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: '30vh', width: '100%' }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I' }}
-          defaultCenter={[50.822220, 4.383720]}
-          defaultZoom={this.props.zoom}
-        >
-          <Marker
-            lat={50.822220}
-            lng={4.383720}
-          />
-          <AnyReactComponent
-            lat={50.822220}
-            lng={4.383720}
-            text="PFP CLUB"
-          />
-
-        </GoogleMapReact>
-      </div>
+      <MyMapComponent
+        onMarkerClick={this.handleMarkerClick}
+      />
     );
   }
 }
 
-export default SimpleMap;
+export default MyFancyComponent;
