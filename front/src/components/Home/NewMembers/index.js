@@ -31,10 +31,7 @@ class NewMember extends Component {
     return (
       <div>
         <div className="container_member">
-          <h2 className="title-h2">NOUVEAU MEMBRE</h2>
-          <div className="bowtie">
-            <span className="node" />
-          </div>
+          <h2 className="title-h2 nodes nodes--color">NOUVEAU MEMBRE</h2>
           <ul className="list--members" ref={el => this.ul = el}>
             {this.state.members.map((elem) => {
               const members = elem.member_id === (this.state.next) ? 'list--members' : 'shadow';
