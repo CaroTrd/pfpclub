@@ -69,7 +69,7 @@ class PersonalForm extends Component {
     return (
       <form onSubmit={this.props.handleSubmit} id="Questionnaire">
         <div className="container-formulaire">
-          <h2 className="title-h2 titre-section">Formulaire d'inscription au PFP Club.</h2>
+          <h2 className="title-h2 titre-section">Formulaire d&apos;inscription au PFP Club.</h2>
           <div className="bowtie">
             <span className="node" />
           </div>
