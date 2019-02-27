@@ -18,10 +18,9 @@ class SubmitForm extends Component {
 
   handleSubmit = (values) => {
     const {
-      name_comp, vatcode, vatnumbr, day, month, year,
+      name_comp, vatcode, vatnumbr,
     } = values;
     const vtnmbr = `${vatcode} ${vatnumbr}`;
-    console.log(vtnmbr);
     fetch('/api/members/inscription/personal',
       {
         method: 'POST',
@@ -101,7 +100,7 @@ class SubmitForm extends Component {
             </p>
             <div className="button--inscription">
               <a href="#Questionnaire">
-                <button /* onClick={() => this.loadMore()} */ type="button" value={this.state.visible} className="styleButton" href="#title">
+                <button type="button" value={this.state.visible} className="styleButton" href="#title">
                   <span className="styleText">JE DEVIENS MEMBRE</span>
                 </button>
               </a>

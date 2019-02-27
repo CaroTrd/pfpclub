@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/label-has-for */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -134,7 +135,6 @@ class PersonalForm extends Component {
                   <option value="11">Novembre</option>
                   <option value="12">Décembre</option>
                 </Field>
-                {console.log(this.props.err)}
                 <span className={!/^(^[0-1]{0,1})([0-9]{1}){0,1}$/.test(this.state.mm) ? 'error__message' : 'correct'}>{this.state.err}</span>
               </li>
               <li>
