@@ -338,7 +338,7 @@ class PersonalForm extends Component {
                 </li>
                 <li>
                   <p className="conditions">
-                    J’accepte que mes données personnelles soient traitées à des
+                    J&apos;accepte que mes données personnelles soient traitées à des
                     fins de marketing direct et pour recevoir les offres promotionnelles
                     des partenaires du PFP Club
                   </p>
