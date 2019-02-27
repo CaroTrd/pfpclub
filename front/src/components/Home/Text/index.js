@@ -57,7 +57,7 @@ class Text extends Component {
                   </p>
                 </div>
               </div>
-              <div className="wrapper cards">
+              <div className="wrapper cards cards--2">
                 <div className="carte">
                   <div className="number">2</div>
                   <div>
@@ -73,7 +73,7 @@ class Text extends Component {
                   </Link>
                 </div>
               </div>
-              <div className="carte cards">
+              <div className="carte cards cards--3">
                 <div className="number">3</div>
                 <div>
                   <p className="list-advantages">

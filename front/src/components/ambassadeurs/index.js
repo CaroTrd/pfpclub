@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AmbassadeursList from '../Ambassadeurslist/index';
+import AmbassadeursList from '../ambassadeurslist/index';
 import '../../assets/styles/typo.scss';
 import './index.scss';
 import Partners from '../Partners/Partnerslevel/index';
@@ -15,8 +15,8 @@ class Ambassadeurs extends Component {
       <div>
         <div className="wrapper container">
           <div className="partners__intro">
-            <h1 className="title-h2"> Les Ambassadeurs </h1>
-            <p>
+            <h1 className="title-h2 nodes nodes--color ambassador--title"> Les Ambassadeurs </h1>
+            <p className="ambassador--text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Pellentesque sit amet sollicitudin justo.
               Vivamus egestas lorem metus, in euismod ante viverra ut.

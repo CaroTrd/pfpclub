@@ -100,7 +100,7 @@ class partnersList extends Component {
           </div>
           <div className="partners__silver partners__list__container">
             <ul className="partners-ul">
-              <h2 className="title-h2 level-name">Sivler</h2>
+              <h2 className="title-h2 level-name">Silver</h2>
               {partnersElementsSilver}
             </ul>
           </div>

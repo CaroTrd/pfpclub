@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Partners from '../Partners/Partnerslevel/index';
+import pres1 from '../../assets/images/pres-1.jpg';
 
 class Presentation extends Component {
   constructor(props) {
@@ -11,15 +12,12 @@ class Presentation extends Component {
 
   render() {
     return (
-      <div>
+      <div className="section--pres">
         <div className="container">
-          <h1>Le Club</h1>
-          <div>
-            <span className="node" />
-          </div>
+          <h1 className="title-h2 nodes nodes--color">Le Club</h1>
           <div className="contenant">
             <div className="pic corner corner--right">
-              <img alt="pic" src="" />
+              <img alt="pic" src={pres1} />
             </div>
             <div className="par">
               <p>

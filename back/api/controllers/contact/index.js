@@ -3,7 +3,7 @@ var express = require('express');
 const bodyParser = require('body-parser');
 var cors = require('cors');
 var contactRoutes = express.Router();
-var api_key = process.env.REACT_MAILGUN_API_KEY;
+/* var api_key = process.env.REACT_MAILGUN_API_KEY;
 var domain = process.env.REACT_MAILGUN_DOMAIN;
 var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
@@ -28,6 +28,6 @@ contactRoutes.post('/message', (req, res, next) => {
     };
   });
   res.status(200).send(req.params);
-});
+});*/
 
 module.exports = contactRoutes;

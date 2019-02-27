@@ -55,3 +55,33 @@
  display:none;
  
  }
+
+ .container-contact{
+    margin: 4em auto;
+ }
+
+ .contact__element{
+     display: flex;
+     align-self: center;
+     margin: 2em 0;
+     justify-content: center;
+    align-items: center;
+    font-size: 18px;
+ }
+
+ .contact__element div{
+    margin: 0!important;
+}
+
+.contact__element div input{
+    border: solid 1px #AA723B;
+    padding: 10px;
+}
+ .contact__element span{
+    padding-right: 30px;
+    width: 100px;
+}
+
+.contact-button{
+    background-color: #AA723B;
+}

@@ -5,7 +5,7 @@
 .navbar-container {
     position: absolute;
     bottom: 30%;
-    left: 51%;
+    left: 50%;
     z-index: 1;
   }
   .nav-active {
@@ -18,13 +18,19 @@
     transform: translate(-50%, -50%);
     background-color: $main-color;
     color: #fff;
-    width: 100%;
+    width: 920px;
+    background-color: transparent;
+    border: solid 2px $border-color;
   }
   .navbar--fixed {
     position: fixed;
     top: 0;
     transform: translate(-50%, 0);
     width: 100%;
+    background-color: $main-color;
+    border: none;
+    line-height: 80px;
+    box-shadow: 0px 6px 10px 0px rgba(33,30,29,0.17);
   }
   .navbar__list {
     list-style: none;
@@ -33,6 +39,7 @@
     justify-content: center;
     margin: 0;
     box-sizing: border-box;
+    padding-left: 0;
   }
   .navbar__list__item {
     text-decoration: none;
@@ -42,10 +49,36 @@
       color: #fff;
       text-decoration: none;
       font-family: $title-font;
-      line-height: 80px;
+      line-height: 54px;
     }
   }
 
+  .navbar__list__item:nth-child(1){
+    padding-left: 0;
+  }
+  .logo-nav{
+    width: 100px;
+    height: 80px;
+    max-height: 80px;
+  }
+  .navbar img{
+    display: none;
+  }
+  .navbar div{
+    display: none;
+  }
+
+  .logo-nav img{
+    display: none;
+  }
+
+  .logo-nav-visi img{
+    display: block;
+  }
+
+  .logo-nav-visi div{
+    display: block;
+  }
   .login-button {
     position: fixed;
     top: 20px;
