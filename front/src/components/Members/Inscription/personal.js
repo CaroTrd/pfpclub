@@ -321,14 +321,14 @@ class PersonalForm extends Component {
                 </li>
                 <li>
                   <p className="conditions">
-                    J'ai pris connaissance et accepte les règles du PFP Club.
+                    J&apos;ai pris connaissance et accepte les règles du PFP Club.
                   </p>
                 </li>
               </ul>
             </div>
           </li>
           <li>
-            <p className="conditions">Acceptation de l'utilisation des données privées *</p>
+            <p className="conditions">Acceptation de l&apos;utilisation des données privées *</p>
           </li>
           <li>
             <div>
