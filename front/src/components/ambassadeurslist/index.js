@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
 import Ambassadeur from '../Ambassadeur/index';
 
@@ -11,7 +12,7 @@ class AmbassadeursList extends Component {
   render() {
     return (
       <div>
-        <ul>
+        <ul className="ambassadors-ul">
           <Ambassadeur />
         </ul>
       </div>

@@ -1,13 +1,11 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> a65850c9743f4baf325cc2fe8fd85b0a3772ce21
 const mysql      = require('mysql');
+require('dotenv').config();
 const connexion = mysql.createConnection({
-  host     : 'localhost',
-  port     : '3306',
-  user     : 'root', //completer avec vos infos
-  password : '', //completer avec vos infos
-  database : 'pfpclub' //completer avec vos infos
+  host     : process.env.REACT_DATABASE_HOST,
+  port     : process.env.REACT_DATABASE_PORT,
+  user     : process.env.REACT_DATABASE_USER, //completer avec vos infos
+  password : process.env.REACT_DATABASE_KEY, //completer avec vos infos
+  database : process.env.REACT_DATABASE_NAME, //completer avec vos infos
 });
-module.exports = connexion;
+
+module.exports  =  connexion;

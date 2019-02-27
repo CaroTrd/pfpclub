@@ -7,14 +7,14 @@ import Home from './components/Home/index';
 import Presentation from './components/Presentation/index';
 import QuisommesNous from './components/Presentation/QuiSommesNous/index';
 import ConseilAdministration from './components/Presentation/ConseilAdministration/index';
-import Ambassadors from './components/Presentation/Ambassadors/Ambassadeurs/index';
+import Ambassadors from './components/Ambassadeurs/index';
 import Inscription from './components/Members/index';
 import Partners from './components/Partners/index';
-/* import Events from './components/Events/index'; */
-/* import Media from './components/Media/index';
+/* import Events from './components/Events/index';
+import Media from './components/Media/index';
 import Contact from './components/Contact/index'; */
-import Hobby from './components/Presentation/Ambassadors/Ambassadeur/hobby';
-// import PartnersList from './components/Partners/Partners/index';
+import Hobby from './components/Ambassadeur/hobby';
+
 
 class App extends Component {
   constructor(props) {
@@ -24,8 +24,8 @@ class App extends Component {
 
   render() {
     return (
-      /* eslint-disable */
-      <div className="App">
+      // eslint-disable-next-line react/jsx-filename-extension
+      <div>
         <BrowserRouter>
           <div>
             <Navbar />

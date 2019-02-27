@@ -1,6 +1,6 @@
-const ambassadorsReducers = (state = [], action) => {
+export default function refreshReducer(state = [], action) {
   switch (action.type) {
-    case 'SAVEAMB':
+    case 'ADD_TODO_SUCCES':
       return [
         ...state,
         ...action.payload,
@@ -8,6 +8,4 @@ const ambassadorsReducers = (state = [], action) => {
     default:
       return state;
   }
-};
-
-export default ambassadorsReducers;
+}
