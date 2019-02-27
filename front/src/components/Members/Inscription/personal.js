@@ -79,10 +79,10 @@ class PersonalForm extends Component {
               Une fois votre candidature évaluée par notre Comité,
               vous recevrez une confirmation avec une demande de paiement
               pour une année - 12 mois - (EUR 100). Ce montant est payable annuellement.
-              Des droits d'entrée au Club uniques (EUR 125) sont aussi à payer au moment
-              de l'acceptation de votre candidature. Le paiement peut-être fait par une
+              Des droits d&apos;entrée au Club uniques (EUR 125) sont aussi à payer au moment
+              de l&apos;acceptation de votre candidature. Le paiement peut-être fait par une
               société ou personne physique. Compte PFP Club: BE36 3631 7885 2781.
-              Ces prix sont d'application du 1 Janvier 2019 au 31 Décembre 2019.
+              Ces prix sont d&apos;application du 1 Janvier 2019 au 31 Décembre 2019.
             </p>
           </div>
         </div>
