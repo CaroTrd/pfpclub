@@ -33,7 +33,6 @@ code {
 }
 .contenant {
   display: flex;
-  //flex-direction: row;
 }
 .corner {
   border: 10px solid transparent;
@@ -76,8 +75,6 @@ code {
 .precedent{
   padding : 30px;
   width: 50%;
-  //margin-bottom: 30px;
-  //margin-right: 50%;
 }
 .precedent a{
   text-decoration: none; 
