@@ -1,0 +1,110 @@
+@import "../../assets/styles/variables.scss";
+.header {
+  height: 100vh;
+  background-color: rgb(192, 62, 62);
+  position: relative;
+}
+
+.header__elements {
+  position: absolute;
+  margin-top: 50vh;
+  margin-left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+.title-h1 {
+  text-transform: uppercase;
+}
+
+#avantages {
+  padding-top: 2em;
+  background-color: brown;
+}
+.row {
+  margin-top: 5em;
+  padding-bottom: 3em;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#avantages h2 {
+  text-align: center;
+  color: white;
+}
+.number {
+  height: 40px;
+  width: 50px;
+  background-color: $main-color--light;
+  text-align: center;
+  padding-top: 10px;
+  position: absolute;
+  top: -10%;
+  left: 43%;
+  border: white solid;
+  color: white;
+  font-size: 24px;
+}
+.titre {
+  display: flex;
+  align-items: flex-start;
+  font-size: 50px;
+}
+.text {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 70px;
+  padding-left: 65px;
+  padding-right: 65px;
+  padding-bottom: 60px;
+}
+
+.card {
+  font-size: 20px;
+  position: relative;
+  box-sizing: border-box;
+  width: 347px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .text {
+    margin-bottom: 15px;
+  }
+}
+.button {
+  background-color: $main-color--light;
+  border: white solid;
+  padding: 15px;
+  position: center;
+  display: inline-block;
+}
+.button a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.bowtie {
+  display: flex;
+  justify-content: center;
+  height: 35px;
+
+  }
+  
+
+@media screen and (max-width: 1200px) {
+  .row {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .card {
+    width: 70%;
+    margin-bottom: 4em;
+  }
+}

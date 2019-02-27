@@ -1,0 +1,31 @@
+@import "./variables";
+
+.title-h1 {
+  font-family: $title-font;
+  font-size: 4.938em;
+  color: #fff;
+}
+
+.title-h2 {
+  font-family: $title-font;
+  font-size: 1.5em;
+  color: #222222;
+  &--light {
+    font-family: $title-font;
+    font-size: 1.5em;
+    color: #eaeaea;
+  }
+}
+
+p {
+  font-family: $body-font;
+  font-size: 0.875em;
+}
+
+link {
+  font-family: $title-font;
+}
+.node {
+  content: url(../images/bow.svg);
+  width: 40px;
+}
