@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 const connexion = require('../../connexions/db');
 var express = require('express');
 var membersRoutes = express.Router();
 require('dotenv').config();
-/* var api_key = `${process.env.REACT_MAILGUN_API_KEY}`;
+var api_key = `${process.env.REACT_MAILGUN_API_KEY}`;
 var domain = `${process.env.REACT_MAILGUN_DOMAIN}`;
-var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain }); */
+var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
 // Get Member on page Home
 
@@ -73,7 +72,7 @@ connexion.query(`INSERT INTO members (first_name, last_name, birthdate, email, p
       res.status(500).json({ server: "Nous avons rencontré un problème lors de la sauvegarde" });
     } else {
       res.status(200).json({ server: "successfully added link" });
-      /* try {
+      try {
         await mailgun.messages().send({
           from: "Mailgun Sandbox <postmaster@sandbox58a7914da99b4f7dac464d460d556111.mailgun.org>", // Expediteur
           to: "Deer Wild <projetpfb@gmail.com>", // Destinataires
@@ -91,7 +90,7 @@ connexion.query(`INSERT INTO members (first_name, last_name, birthdate, email, p
         });
       } catch (err) {
         console.log(err)
-      } */
+      }
     }
   });
 });
@@ -113,31 +112,4 @@ membersRoutes.post('/inscription/professional', function (req, res) {
   });
 });
 
-=======
-const connexion = require('../../connexions/db');
-var express = require('express');
-var membersRoutes = express.Router();
-// var api_key = "";
-// var domain = "";;
-// var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
-
-
-// Member registration forms
-
-
-//Get Member on page Home
-
-membersRoutes.get('/newmembers', function (req, res) {
-  connexion.query('SELECT member_id, first_name, last_name, text, pictures FROM `members` WHERE member_status=1 AND affiliation_date >= NOW() - INTERVAL 1 MONTH', function (err, results) {
-    if (err) {
-      console.log(err)
-      res.status(500).send(err)
-    } else {
-      console.log(results)
-      res.status(200).json(results)
-    }
-  })
-});
-
->>>>>>> a65850c9743f4baf325cc2fe8fd85b0a3772ce21
 module.exports = membersRoutes;

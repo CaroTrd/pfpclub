@@ -1,3 +1,4 @@
+@import "./assets/styles/variables.scss";
 body {
   margin: 0;
   padding: 0;
@@ -11,4 +12,76 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.par {
+  padding: 30px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+.bowtie {
+  display: flex;
+  justify-content: center;
+  height: 35px;
+}
+
+.pic img {
+  width: 100%;
+}
+.pic {
+  min-width: 300px;
+  height: 300px;
+}
+.contenant {
+  display: flex;
+}
+.corner {
+  border: 10px solid transparent;
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    width: 65px;
+    height: 65px;
+    border: solid 1.5px #dbc4a2;
+    position: absolute;
+  }
+  &:before {
+    border-bottom: transparent;
+    border-right: transparent;
+    top: -10px;
+    left: -10px;
+    margin-right: 10px;
+  }
+  &--right:after {
+    border-top: transparent;
+    border-left: transparent;
+    bottom: -10px;
+    right: -10px;
+    margin-left: 10px;
+  }
+}
+.link-host{
+  display: flex;
+}
+.link {
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-left: 50%;
+  width: 50%;
+}
+.link a {
+  text-decoration: none;
+}
+.precedent{
+  padding : 30px;
+  width: 50%;
+}
+.precedent a{
+  text-decoration: none; 
+}
+@media screen and (max-width: 800px) {
+  .contenant {
+    display: flex;
+    flex-direction: column;
+  }
 }
