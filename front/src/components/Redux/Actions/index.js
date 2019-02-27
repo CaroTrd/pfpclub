@@ -11,7 +11,6 @@ export const savedSearchAction = Search => ({
   payLoad: Search,
 });
 
-
 // Partenaires footer
 
 export const fetchPartners = partners => ({

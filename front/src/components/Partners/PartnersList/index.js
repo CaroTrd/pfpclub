@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PartnersElements from './PartnersElements/index';
+import '../../../assets/styles/typo.scss';
 import './index.scss';
 
 class partnersList extends Component {
