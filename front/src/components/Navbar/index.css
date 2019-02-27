@@ -1,7 +1,7 @@
 /* Base */
 .navbar-container {
     position: absolute;
-    bottom: 20%;
+    bottom: 30%;
     left: 51%;
     z-index: 1;
   }

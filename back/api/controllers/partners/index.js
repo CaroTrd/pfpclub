@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const connexion = require('../../connexions/db');
 var express = require('express');
 var partnersRoutes = express.Router();
@@ -52,4 +53,29 @@ partnersRoutes.get('/partners-level', function (req, res, next) {
   );
 });
 
+=======
+const connexion = require('../../connexions/db');
+var express = require('express');
+var partnersRoutes = express.Router();
+
+// Partners Level
+
+partnersRoutes.get('/partners-level', function (req, res, next) {
+  connexion.query(
+    `SELECT name, logo, partner_id, partnership_type FROM partners AS pa 
+    JOIN partners_types AS pt ON pt.partnership_type_id=pa.partnership_type 
+    JOIN companies AS co ON co.company_id = pa.company_id WHERE partner_status = 1`,
+    (err, results) => {
+      if (err) {
+        console.log(err);
+        res.status(500).json("erreur");
+      } else {
+        console.log(results);
+        res.status(200).json(results);
+      }
+    }
+  );
+});
+
+>>>>>>> a65850c9743f4baf325cc2fe8fd85b0a3772ce21
 module.exports = partnersRoutes;

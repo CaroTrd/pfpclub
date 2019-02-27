@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../index.scss';
+import welcom1 from '../../../assets/images/welcom-1.jpg';
+import welcom2 from '../../../assets/images/welcom-2.jpg';
+import LogoAbsolute from '../../../assets/images/logo-grey.svg';
 import '../../../assets/styles/typo.scss';
 
 class Text extends Component {
@@ -12,8 +15,9 @@ class Text extends Component {
   render() {
     return (
       <div>
-        <section className="section container">
-          <h2 className="title-h2 center">Bienvenue au nouveau club de Belgique</h2>
+        <section className="section section--bienvenue container">
+          <h2 className="title-h2 nodes nodes--color center">Bienvenue au nouveau club de Belgique</h2>
+          <img className="logo-absolute" src={LogoAbsolute} alt="" />
           <div className="col-9 welcom__text">
             <p>
               Le PFP Club a comme objectif de fournir des services variés à ses membres par le
@@ -30,21 +34,18 @@ class Text extends Component {
               consectetur auctor mauris.
             </p>
           </div>
-          <div className="welcom__images">
-            <div className="corner corner--right">
-              <img src="http://via.placeholder.com/272x221" alt="" />
+          <div className=" col-9 welcom__images">
+            <div className="corner corner--right welcom--corner">
+              <img src={welcom2} alt="" />
             </div>
-            <div className="corner corner--right">
-              <img src="http://via.placeholder.com/272x221" alt="" />
+            <div className="corner corner--right welcom--corner">
+              <img src={welcom1} alt="" />
             </div>
           </div>
         </section>
         <section id="avantages">
-          <h2 className="title-h2 style_texte">AVANTAGES DU CLUB</h2>
-          <div className="bowtie">
-            <span className="node" />
-          </div>
-          <div className="container">
+          <h2 className="title-h2 style_texte nodes nodes--white">Avantages du club</h2>
+          <div className="container container__advantage">
             <div className="row">
               <div className="carte cards">
                 <div className="number">1</div>

@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import './index.scss';
 import '../../assets/styles/typo.scss';
+import logoWhite from '../../assets/images/logo-white.svg';
 import Text from './Text/index';
 import NewMember from './NewMembers/index';
 import Partners from '../Partners/Partnerslevel/index';
@@ -13,8 +14,8 @@ class Home extends Component {
       <div>
         <div className="header">
           <div className="header__elements">
-            <img src="" alt="logo pfp club" />
-            <h1 className="title-h1">pfp club</h1>
+            <img className="logo__img" src={logoWhite} alt="logo pfp club" />
+            <h1 className="title-h1 title-principal">pfp club</h1>
             <p>Ceci n&apos;est pas un club (comme les autres)</p>
           </div>
           <div className="mouse_scroll">
