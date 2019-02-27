@@ -1,8 +1,9 @@
 /* eslint-disable camelcase */
 import React, { Component } from 'react';
 import PersonalForm from './Inscription/personal';
-import Partners from '../Partners/Partnerslevel/index';
-import './index.css';
+// import Partners from '../Partners/Partnerslevel/index';
+import '../../assets/styles/typo.scss';
+import './index.scss';
 
 
 class SubmitForm extends Component {
@@ -11,61 +12,43 @@ class SubmitForm extends Component {
     this.state = {
       message: '',
       isOpen: false,
+      visible: false,
     };
   }
 
   handleSubmit = (values) => {
     const {
-      firstname, lastname, birthdate, email, phone, address,
-      city, municipality, zipcode, country, name, manager, vatnumbr,
-      e_mail, phone_comp, address_comp, city_comp, zipcode_comp, country_comp,
-      municipality_comp, website,
+      name_comp, vatcode, vatnumbr, day, month, year,
     } = values;
-    const personal = {
-      firstname, lastname, birthdate, email, phone, address, city, municipality, zipcode, country,
-    };
-    const professional = {
-      name,
-      manager,
-      vatnumbr,
-      e_mail,
-      phone_comp,
-      address_comp,
-      city_comp,
-      zipcode_comp,
-      country_comp,
-      municipality_comp,
-      website,
-    };
+    const vtnmbr = `${vatcode} ${vatnumbr}`;
+    console.log(vtnmbr);
     fetch('/api/members/inscription/personal',
       {
         method: 'POST',
         headers: new Headers({
           'Content-Type': 'application/json',
         }),
-        body: JSON.stringify(personal),
+        body: JSON.stringify(values),
       })
       .then(
         (res) => {
           if (res.status === 200) {
-            this.setState({ message: 'Votre demande a bien éte enregitré.', isOpen: !false });
+            this.setState({ message: 'Votre demande a bien éte enregitrée.', isOpen: !false });
           }
           if (res.status === 500) {
             this.setState({ message: 'Nous avons rencontré un problème lors de la sauvegarde.', isOpen: !false });
           }
         },
       );
-    if (typeof professional.name === 'undefined' && typeof professional.vatnumbr === 'undefined') {
-      // eslint-disable-next-line no-console
-      console.log('');
-    } else {
+
+    if (typeof name_comp !== 'undefined' && typeof vtnmbr !== 'undefined') {
       fetch('/api/members/inscription/professional',
         {
           method: 'POST',
           headers: new Headers({
             'Content-Type': 'application/json',
           }),
-          body: JSON.stringify(professional),
+          body: JSON.stringify(values),
         })
         .then(
           (res) => {
@@ -77,11 +60,19 @@ class SubmitForm extends Component {
             }
           },
         );
-      this.setState({
-        isOpen: !false,
-      });
     }
+    this.setState({
+      isOpen: !false,
+    });
   }
+
+  /* loadMore() {
+    if (this.state.visible === false) {
+      this.setState({ visible: true });
+    } else {
+      this.setState({ visible: false });
+    }
+  } */
 
   handleClick() {
     this.setState({
@@ -92,16 +83,88 @@ class SubmitForm extends Component {
 
   render() {
     return (
-      <div>
-        <PersonalForm onSubmit={this.handleSubmit} />
-        <div className={this.state.isOpen ? 'popup' : ' close'}>
-          <h1 className="welcome">Ta demande d inscription</h1>
-          <div className="flex-container">
-            <p className="message"><strong>{this.state.message}</strong></p>
-            <button type="button" className="closewindow" onClick={() => this.handleClick()}>Fermer</button>
+      <div className="space">
+        <div className="container_members">
+          <h2 className="title-h2 titre-section">DEVENIR MEMBRE</h2>
+          <div className="bowtie">
+            <span className="node" />
+          </div>
+          <div className="description">
+            <p className="text form">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu metus libero. Sed
+              eu volutpat dolor. Integer justo eros, tempor vitae leo ornare, varius dictum quam.
+              Nam sed nisl turpis. Donec in consectetur dolor. Suspendisse pellentesque erat libero,
+              a rutrum tortor interdum eget. Maecenas scelerisque eleifend erat eget ultricies.
+              Aliquam bibendum mi in ligula commodo bibendum a interdum lacus.
+              Aliquam fermentum risus eu venenatis sodales. Sed nec aliquam lacus,
+              consectetur auctor mauris.
+            </p>
+            <div className="button--inscription">
+              <a href="#Questionnaire">
+                <button /* onClick={() => this.loadMore()} */ type="button" value={this.state.visible} className="styleButton" href="#title">
+                  <span className="styleText">JE DEVIENS MEMBRE</span>
+                </button>
+              </a>
+            </div>
           </div>
         </div>
-        <Partners />
+        <section id="advantages">
+          <div className="container_members">
+            <h2 className="title-h2 avantage">AVANTAGES DU CLUB</h2>
+            <div className="row">
+              <div className="text card">
+
+                <div className="avantages__text">
+                  <div className="bowtie">
+                    <span className="node" />
+                  </div>
+                  <p>
+                    Bénéficier d’une carte de membre qui donne accès à des
+                    réductions et prix préférentiels dans différents magasins,
+                    restaurants, bars et sociétés partenaires
+                  </p>
+                </div>
+              </div>
+              <div className="text card">
+                <div className="text">
+                  <div className="avantages__text">
+                    <div className="bowtie">
+                      <span className="node" />
+                    </div>
+                    <p>
+                      Recevoir des invitations pour participer aux évènements PFP
+                      Club
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="text card">
+                <div className="avantages__text">
+                  <div className="bowtie">
+                    <span className="node" />
+                  </div>
+                  <p>
+                    Avoir accès à un site web restreint où seront postés des infos
+                    pratiques ainsi que des rubriques spécifiques par les
+                    prestataires PFP conseillés par les différents membres
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div className="container_members">
+          {/* {this.state.visible ? : ''
+          } */}
+          <PersonalForm onSubmit={this.handleSubmit} id="Questionnaire" />
+          <div className={this.state.isOpen ? 'popup' : ' close'}>
+            <div className="flex-container">
+              <p className="message"><strong>{this.state.message}</strong></p>
+              <button type="button" className="closewindow" onClick={() => this.handleClick()}>Fermer</button>
+            </div>
+          </div>
+        </div>
+        {/* <Partners /> */}
       </div>
     );
   }
