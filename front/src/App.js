@@ -11,8 +11,8 @@ import Ambassadors from './components/Ambassadeurs/index';
 import Inscription from './components/Members/index';
 import Partners from './components/Partners/index';
 /* import Events from './components/Events/index';
-import Media from './components/Media/index';
-import Contact from './components/Contact/index'; */
+import Media from './components/Media/index'; */
+import Contact from './components/Contact/index';
 import Hobby from './components/Ambassadeur/hobby';
 
 
@@ -39,8 +39,8 @@ class App extends Component {
               <Route path="/members" component={Inscription} />
               <Route path="/partners" component={Partners} />
               {/* <Route path="/events" component={Events} />
-              <Route path="/media" component={Media} />
-              <Route exact path="/contact" component={Contact} /> */}
+              <Route path="/media" component={Media} /> */}
+              <Route exact path="/contact" component={Contact} />
             </Switch>
           </div>
         </BrowserRouter>

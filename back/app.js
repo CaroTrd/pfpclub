@@ -6,6 +6,7 @@ const  app  =  express();
 var  server  =  require('http').createServer(app);
 var membersRoutes = require('./api/controllers/members/index');
 var partnersRoutes = require('./api/controllers/partners/index');
+var contactRoutes = require('./api/controllers/contact/index');
 var ambassadorRoutes = require('./api/controllers/ambassadors/index');
 require('dotenv').config();
 
@@ -16,6 +17,7 @@ app.use(express.static(__dirname  +  '/public'));
 
 app.use('/api/members', membersRoutes);
 app.use('/api/partners', partnersRoutes);
+app.use('/api/contact', contactRoutes);
 app.use('/api/ambassadors', ambassadorRoutes);
 
 server.listen( process.env.PORT  ||  4000, function(){
