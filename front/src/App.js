@@ -1,3 +1,6 @@
+/* eslint-disable */
+
+
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './logo.svg';
@@ -16,7 +19,6 @@ import Contact from './components/Contact/index';
 import Hobby from './components/Presentation/Ambassadors/Ambassadeur/hobby';
 import PartnersList from './components/Partners/Partners/index'; */
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -25,14 +27,14 @@ class App extends Component {
 
   render() {
     return (
-      // eslint-disable-next-line react/jsx-filename-extension
-      <div>
+      /* eslint-disable */
+      <div className="App">
         <BrowserRouter>
           <div>
             <Navbar />
             <Switch>
-              <Route exact path="/" component={Home} />
-              {/* <Route exact path="/presentation" component={Presentation} />
+            <Route exact path="/" component={Home} />
+              {/*<Route exact path="/presentation" component={Presentation} />
               <Route path="/qui-sommes-nous" component={QuisommesNous} />
               <Route path="/le-conseil-d'administration" component={ConseilAdministration} />
               <Route path="/ambassadeur" component={Ambassadors} />

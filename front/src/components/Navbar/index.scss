@@ -1,4 +1,7 @@
 /* Base */
+
+@import '../../assets/styles/variables.scss';
+
 .navbar-container {
     position: absolute;
     bottom: 30%;
@@ -13,7 +16,9 @@
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: white;
+    background-color: $main-color;
+    color: #fff;
+    width: 100%;
   }
   .navbar--fixed {
     position: fixed;
@@ -23,19 +28,24 @@
   }
   .navbar__list {
     list-style: none;
-    padding: 1em;
     display: flex;
-    border: solid 1px #000;
+    border-top: solid 1px $border-color;
     justify-content: center;
-    justify-content: flex-start;
     margin: 0;
+    box-sizing: border-box;
   }
   .navbar__list__item {
     text-decoration: none;
+    padding: 0 20px;
+    & a{
+      text-transform: uppercase;
+      color: #fff;
+      text-decoration: none;
+      font-family: $title-font;
+      line-height: 80px;
+    }
   }
-  .navbar__list__item {
-    padding: 5px;
-  }
+
   .login-button {
     position: fixed;
     top: 20px;
