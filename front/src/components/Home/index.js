@@ -5,7 +5,7 @@ import './index.scss';
 import '../../assets/styles/typo.scss';
 import Text from './Text/index';
 import NewMember from './NewMembers/index';
-// import Partners from '../Partners/Partnerslevel/index';
+import Partners from '../Partners/Partnerslevel/index';
 
 class Home extends Component {
   render() {
@@ -29,7 +29,7 @@ class Home extends Component {
         </div>
         <Text />
         <NewMember />
-        {/* <Partners pageName="home" /> */}
+        <Partners pageName="home" />
       </div>
     );
   }

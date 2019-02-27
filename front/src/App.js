@@ -7,10 +7,10 @@ import Home from './components/Home/index';
 /* import Presentation from './components/Presentation/index';
 import QuisommesNous from './components/Presentation/QuiSommesNous/index';
 import ConseilAdministration from './components/Presentation/ConseilAdministration/index';
-import Ambassadors from './components/Presentation/Ambassadors/Ambassadeurs/index';
+import Ambassadors from './components/Presentation/Ambassadors/Ambassadeurs/index'; */
 import Inscription from './components/Members/index';
 import Partners from './components/Partners/index';
-import Events from './components/Events/index';
+/* import Events from './components/Events/index';
 import Media from './components/Media/index';
 import Contact from './components/Contact/index';
 import Hobby from './components/Presentation/Ambassadors/Ambassadeur/hobby';
@@ -26,7 +26,7 @@ class App extends Component {
   render() {
     return (
       // eslint-disable-next-line react/jsx-filename-extension
-      <div className="App">
+      <div>
         <BrowserRouter>
           <div>
             <Navbar />
@@ -36,12 +36,12 @@ class App extends Component {
               <Route path="/qui-sommes-nous" component={QuisommesNous} />
               <Route path="/le-conseil-d'administration" component={ConseilAdministration} />
               <Route path="/ambassadeur" component={Ambassadors} />
-              <Route path="/hobby/:hobby_name" component={Hobby} />
+              <Route path="/hobby/:hobby_name" component={Hobby} /> */}
               <Route path="/members" component={Inscription} />
               <Route path="/partners" component={Partners} />
-              <Route path="/events" component={Events} />
+              {/* <Route path="/events" component={Events} />
               <Route path="/media" component={Media} />
-              <Route exact path="/contact" component={Contact} /> */}
+            <Route exact path="/contact" component={Contact} /> */}
             </Switch>
           </div>
         </BrowserRouter>

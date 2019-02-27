@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import React, { Component } from 'react';
 import PersonalForm from './Inscription/personal';
-// import Partners from '../Partners/Partnerslevel/index';
+import Partners from '../Partners/Partnerslevel/index';
 import '../../assets/styles/typo.scss';
 import './index.scss';
 
@@ -163,7 +163,7 @@ class SubmitForm extends Component {
             </div>
           </div>
         </div>
-        {/* <Partners /> */}
+        <Partners />
       </div>
     );
   }
