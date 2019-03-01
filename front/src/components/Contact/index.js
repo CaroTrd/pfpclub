@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Map from './Map/index';
 import ContactForm from './ContactForm/index';
 import Partners from '../Partners/Partnerslevel/index';
-import './index.css';
+import './index.scss';
 
 class Contact extends Component {
   constructor(props) {

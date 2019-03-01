@@ -21,7 +21,7 @@ const MyMapComponent = compose(
     defaultZoom={18}
     defaultCenter={{ lat: 50.822239, lng: 4.383707 }}
   >
-    <Marker key="marker" icon={{ url: pin, scale: 10 }} position={{ lat: 50.822239, lng: 4.383707 }} />
+    <Marker key="marker" icon={{ url: pin, scale: 10 }} position={{ lat: 50.822291, lng: 4.383732 }} />
   </GoogleMap>
 ));
 

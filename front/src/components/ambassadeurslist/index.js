@@ -1,6 +1,6 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { Component } from 'react';
-import Ambassadeur from '../ambassadeur/index';
+import Ambassadeur from '../Ambassadeur/index';
 
 class AmbassadeursList extends Component {
   constructor(props) {

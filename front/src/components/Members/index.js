@@ -157,8 +157,8 @@ class SubmitForm extends Component {
           } */}
           <PersonalForm onSubmit={this.handleSubmit} id="Questionnaire" />
           <div className={this.state.isOpen ? 'popup' : ' close'}>
+            <h1>{this.state.message}</h1>
             <div className="flex-container">
-              <p className="message"><strong>{this.state.message}</strong></p>
               <button type="button" className="closewindow" onClick={() => this.handleClick()}>Fermer</button>
             </div>
           </div>

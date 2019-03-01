@@ -190,10 +190,7 @@ class PersonalForm extends Component {
             <ul className="fields">
               <li>
                 <p className="typo">
-                  Nom société
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  Nom société:
                 </p>
               </li>
               <li><Field component={renderField} type="text" name="legal_form" label="legal_form" placeholder="Forme juridique" className="field1" /></li>
@@ -202,10 +199,7 @@ class PersonalForm extends Component {
             <ul className="fields">
               <li>
                 <p className="typo">
-                  Position
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  Position:
                 </p>
               </li>
               <li><Field component={renderField} type="text" name="position" label="position" placeholder="" className="field1" /></li>
@@ -213,10 +207,7 @@ class PersonalForm extends Component {
             <ul className="fields">
               <li>
                 <p className="typo">
-                  TVA
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  TVA:
                 </p>
               </li>
               <li><Field component={renderField} type="text" name="vatcode" label="vat_code" placeholder="BE" className="field5" /></li>
@@ -225,10 +216,7 @@ class PersonalForm extends Component {
             <ul className="fields">
               <li>
                 <p className="typo">
-                  E-mail société
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  E-mail société:
                 </p>
               </li>
               <li><Field component={renderField} type="e_mail" name="e_mail" label="e_mail" placeholder="ex:myname@example.com" className="field1" /></li>
@@ -236,10 +224,7 @@ class PersonalForm extends Component {
             <ul className="fields">
               <li>
                 <p className="typo">
-                  Téléphone société
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  Téléphone société:
                 </p>
               </li>
               <li><Field component={renderField} type="text" name="phone_code" label="phone_code" placeholder="Code" className="field4" /></li>
@@ -248,10 +233,7 @@ class PersonalForm extends Component {
             <ul className="fields">
               <li>
                 <p className="typo">
-                  Adresse société
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  Adresse société:
                 </p>
               </li>
               <li><Field component={renderField} type="text" name="street_comp" label="street_comp" placeholder="Rue" className="field1" /></li>
@@ -263,10 +245,7 @@ class PersonalForm extends Component {
             <ul className="field__question">
               <li>
                 <p className="inquest">
-                  Comment avez-vous su que le PFP existe?
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  Comment avez-vous su que le PFP existe?:
                 </p>
               </li>
               <li>
@@ -328,7 +307,7 @@ class PersonalForm extends Component {
             </div>
           </li>
           <li>
-            <p className="conditions">Acceptation de l&apos;utilisation des données privées *</p>
+            <p className="conditions">Acceptation de l&apos;utilisation des données privées</p>
           </li>
           <li>
             <div>

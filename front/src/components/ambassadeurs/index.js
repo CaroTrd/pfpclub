@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AmbassadeursList from '../ambassadeurslist/index';
+import AmbassadeursList from '../Ambassadeurslist/index';
 import '../../assets/styles/typo.scss';
 import './index.scss';
 import Partners from '../Partners/Partnerslevel/index';
