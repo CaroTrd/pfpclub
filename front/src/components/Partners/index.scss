@@ -16,7 +16,8 @@
     text-align: center;
     width: 71.17117117117117%; 
     margin: 0 auto;
-    padding: 70px 0;
+    padding-bottom: 70px;
+    padding-top: calc(70px + 80px);
 }
 
 .input-partners{
@@ -24,12 +25,16 @@
     box-sizing: border-box;
     height: 40px;
     width: 350px;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, .4);
+    color: #fff;
     border: solid #E5E4E2 2px;
-    color: white;
     display: block;
     padding-left:30px;
     overflow: hidden;
+}
+
+.input-partners::selection{
+  background-color: cyan;
 }
 
 
