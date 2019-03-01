@@ -1,4 +1,4 @@
-@import "./variables";
+@import './variables.scss';
 
 .title-h1 {
   font-family: $title-font;
@@ -25,8 +25,14 @@
   color: #999999;
 }
 
+.members-info{
+    font-family: $body-font;
+    font-size: 1.2em;
+    color: #222222;
+}
+
 .node{
-  content: url(../images/bow.svg);
+  content: url(../images/node-color.svg);
   width: 40px;
 }
 
@@ -39,3 +45,6 @@ link {
   font-family: $title-font;
 }
 
+a{
+  font-family: $title-font;
+}
