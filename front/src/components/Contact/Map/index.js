@@ -9,7 +9,7 @@ import pin from './pins2.png';
 
 const MyMapComponent = compose(
   withProps({
-    googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCPzxx1Hx18ZT4q2ONjkyFWYRVhlmNrN-I&v=3.exp&libraries=geometry,drawing,places',
+    googleMapURL: 'https://maps.googleapis.com/maps/api/js?key==3.exp&libraries=geometry,drawing,places',
     loadingElement: <div style={{ height: '100%' }} />,
     containerElement: <div className="map-container" style={{ height: '400px' }} />,
     mapElement: <div className="map" style={{ height: '100%' }} />,
