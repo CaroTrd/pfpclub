@@ -2,23 +2,24 @@ import React from 'react';
 
 const renderField = (
   {
-    placeholder, value, min, max, id, type, label, input, meta: { touched, error },
+    className, placeholder, value, id, type, label, input, meta: { touched, error },
   },
 ) => (
-// eslint-disable-next-line react/jsx-filename-extension
-  <div className="input-row">
+  // eslint-disable-next-line react/jsx-filename-extension
+  <div className="relative-form">
     <input
       {...input}
       type={type}
-      min={min}
-      max={max}
       id={id}
       value={value}
       label={label}
       placeholder={placeholder}
+      className={className}
     />
-    {touched && error
-        && <span className="error">{error}</span>}
+    {
+        touched && error
+        && <span className="error">{error}</span>
+      }
   </div>
 );
 
