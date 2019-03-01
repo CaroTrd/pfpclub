@@ -6,6 +6,8 @@ const  app  =  express();
 var  server  =  require('http').createServer(app);
 var membersRoutes = require('./api/controllers/members/index');
 var partnersRoutes = require('./api/controllers/partners/index');
+var contactRoutes = require('./api/controllers/contact/index');
+var ambassadorRoutes = require('./api/controllers/ambassadors/index');
 require('dotenv').config();
 
 app.use(morgan('dev'));
