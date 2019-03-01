@@ -8,9 +8,6 @@ import { reducer as formReducer } from 'redux-form';
 import categoryReducers from '../Reducers/Category/index';
 import searchReducers from '../Reducers/Search/index';
 import partnerReducer from '../Reducers/Partners/index';
-import ambassadorsReducers from '../Reducers/Ambassadors/index';
-import refreshReducer from '../Reducers/Ambassadors/refreshReducer';
-import sendIdReducers from '../Reducers/Sendid/index';
 
 
 const composeEnhancers = typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
@@ -26,10 +23,6 @@ const store = createStore(combineReducers({
   Partner: partnerReducer,
   form: formReducer,
   routing: routerReducer,
-  info: ambassadorsReducers,
-  ambassadorsReducers,
-  sendIdReducers,
-  refreshReducer,
 }), enhancer);
 
 export default store;

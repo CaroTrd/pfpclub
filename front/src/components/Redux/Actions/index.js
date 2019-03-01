@@ -17,4 +17,3 @@ export const fetchPartners = partners => ({
   type: 'FETCH_PLATINIUM',
   payload: partners,
 });
-
