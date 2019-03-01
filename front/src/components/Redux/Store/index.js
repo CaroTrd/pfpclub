@@ -22,7 +22,7 @@ const store = createStore(combineReducers({
   searchReducers,
   Partner: partnerReducer,
   form: formReducer,
-  routing: routerReducer
+  routing: routerReducer,
 }), enhancer);
 
 export default store;
