@@ -9,6 +9,7 @@
     margin: 0 auto;
 }
 
+
 .container-formulaire{
     margin-top: 100px;
     position: relative;
@@ -311,6 +312,7 @@ input[type=checkbox] {
     -webkit-appearance: none;
     -moz-appearance: none;
     -ms-appearance: none;
+    outline: none;
 }
 
 // new style of the input
@@ -474,7 +476,7 @@ input[type="checkbox"]:checked {
 
 .message {
     margin: 1em;
-    background-color: #F7F7F7;
+    background-color: #F7F7F7 !important;
     border-radius: 20px;
     width: 10%;
     height: 100%;

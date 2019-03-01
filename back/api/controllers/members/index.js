@@ -6,34 +6,6 @@ require('dotenv').config();
 var domain = `${process.env.REACT_MAILGUN_DOMAIN}`;
 var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain }); */
 
-// Get Member on page Home
-
-membersRoutes.get('/newmembers', function(req, res){
-  connexion.query('SELECT member_id, first_name, last_name, text, pictures FROM `members` WHERE member_status=1 AND affiliation_date >= NOW() - INTERVAL 1 MONTH', function (err, results){
-    if(err) {
-      console.log(err)
-      res.status(500).send(err)
-    } else {
-      console.log(results)
-      res.status(200).json(results)
-    }
-  })
-});
-
-// Get list of TVA on database
-
-membersRoutes.get('/vatnumbr', function(req, res){
-  connexion.query('SELECT name, legal_form, manager, vat_numbr, email, phone, address, city, municipality, zip_code FROM companies', function (err, results){
-    if(err) {
-      console.log(err)
-      res.status(500).send(err)
-    } else {
-      console.log(results)
-      res.status(200).json(results)
-    }
-  })
-});
-
 // Member registration forms
 
 membersRoutes.post('/inscription/personal', function (req, res) {
@@ -72,10 +44,10 @@ connexion.query(`INSERT INTO members (first_name, last_name, birthdate, email, p
       res.status(500).json({ server: "Nous avons rencontré un problème lors de la sauvegarde" });
     } else {
       res.status(200).json({ server: "successfully added link" });
-      /* try {
+      try {
         await mailgun.messages().send({
-          from: "Mailgun Sandbox <postmaster@sandbox58a7914da99b4f7dac464d460d556111.mailgun.org>", // Expediteur
-          to: "Deer Wild <projetpfb@gmail.com>", // Destinataires
+          from: "PFP Club <postmaster@sandbox58a7914da99b4f7dac464d460d556111.mailgun.org>", // Expediteur
+          to: "Deer Wild <projetpfb@gmail.com>," + email, // Destinataires
           subject: "Nouvelle demande d'adhésion sur PFP Club.", // Sujet
           text: "Bonjour Pablo," + " " + firstname + " " + lastname + " " + "vous a envoyé une demande d'adhésion sur votre page PFPClub.",
         });
@@ -83,14 +55,14 @@ connexion.query(`INSERT INTO members (first_name, last_name, birthdate, email, p
         console.log(err)
       } try {
         await mailgun.messages().send({
-          from: "Mailgun Sandbox <postmaster@sandbox58a7914da99b4f7dac464d460d556111.mailgun.org>", // Expediteur
-          to: "Deer Wild <projetpfb@gmail.com>," + email, // Destinataires
+          from: "PFP Club <postmaster@sandbox58a7914da99b4f7dac464d460d556111.mailgun.org>", // Expediteur
+          to: "Deer" + " " +  firstname + ", " + email, // Destinataires
           subject: "Nouvelle demande d'adhésion sur PFP Club.", // Sujet
           text: "Bonjour" + " " + firstname + " " + lastname + ", " + "Nous avons bien reçu votre demande d'inscription. Nous reviendrons vers vous dans les plus brefs délais. L'équipe PFP CLub.",
         });
       } catch (err) {
         console.log(err)
-      } */
+      }
     }
   });
 });

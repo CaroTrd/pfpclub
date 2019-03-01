@@ -53,7 +53,7 @@ const validate = (values) => {
   if (!street || street.trim() === '') {
     errors.street = 'Veuillez renseigner votre rue';
   } else if (!/^(?:(?:[,. ]?){1}[-a-zA-Zàâäéèêëïîôöùûüç])+$/i.test(street)) {
-    errors.street = 'Veuillez renseigner un nom de rue correct';
+    errors.street = 'Veuillez renseigner un nom de rue valide';
   }
   if (!number || number.trim() === '') {
     errors.number = 'Veuillez renseigner votre numéro';

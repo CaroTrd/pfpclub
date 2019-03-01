@@ -69,7 +69,7 @@ class PersonalForm extends Component {
     return (
       <form onSubmit={this.props.handleSubmit} id="Questionnaire">
         <div className="container-formulaire">
-          <h2 className="title-h2 titre-section">Formulaire d'inscription au PFP Club.</h2>
+          <h2 className="title-h2 titre-section">Formulaire d&apos;inscription au PFP Club.</h2>
           <div className="bowtie">
             <span className="node" />
           </div>
@@ -79,10 +79,10 @@ class PersonalForm extends Component {
               Une fois votre candidature évaluée par notre Comité,
               vous recevrez une confirmation avec une demande de paiement
               pour une année - 12 mois - (EUR 100). Ce montant est payable annuellement.
-              Des droits d'entrée au Club uniques (EUR 125) sont aussi à payer au moment
-              de l'acceptation de votre candidature. Le paiement peut-être fait par une
+              Des droits d&apos;entrée au Club uniques (EUR 125) sont aussi à payer au moment
+              de l&apos;acceptation de votre candidature. Le paiement peut-être fait par une
               société ou personne physique. Compte PFP Club: BE36 3631 7885 2781.
-              Ces prix sont d'application du 1 Janvier 2019 au 31 Décembre 2019.
+              Ces prix sont d&apos;application du 1 Janvier 2019 au 31 Décembre 2019.
             </p>
           </div>
         </div>
@@ -190,10 +190,7 @@ class PersonalForm extends Component {
             <ul className="fields">
               <li>
                 <p className="typo">
-                  Nom société
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  Nom société:
                 </p>
               </li>
               <li><Field component={renderField} type="text" name="legal_form" label="legal_form" placeholder="Forme juridique" className="field1" /></li>
@@ -202,10 +199,7 @@ class PersonalForm extends Component {
             <ul className="fields">
               <li>
                 <p className="typo">
-                  Position
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  Position:
                 </p>
               </li>
               <li><Field component={renderField} type="text" name="position" label="position" placeholder="" className="field1" /></li>
@@ -213,10 +207,7 @@ class PersonalForm extends Component {
             <ul className="fields">
               <li>
                 <p className="typo">
-                  TVA
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  TVA:
                 </p>
               </li>
               <li><Field component={renderField} type="text" name="vatcode" label="vat_code" placeholder="BE" className="field5" /></li>
@@ -225,10 +216,7 @@ class PersonalForm extends Component {
             <ul className="fields">
               <li>
                 <p className="typo">
-                  E-mail société
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  E-mail société:
                 </p>
               </li>
               <li><Field component={renderField} type="e_mail" name="e_mail" label="e_mail" placeholder="ex:myname@example.com" className="field1" /></li>
@@ -236,10 +224,7 @@ class PersonalForm extends Component {
             <ul className="fields">
               <li>
                 <p className="typo">
-                  Téléphone société
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  Téléphone société:
                 </p>
               </li>
               <li><Field component={renderField} type="text" name="phone_code" label="phone_code" placeholder="Code" className="field4" /></li>
@@ -248,10 +233,7 @@ class PersonalForm extends Component {
             <ul className="fields">
               <li>
                 <p className="typo">
-                  Adresse société
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  Adresse société:
                 </p>
               </li>
               <li><Field component={renderField} type="text" name="street_comp" label="street_comp" placeholder="Rue" className="field1" /></li>
@@ -263,10 +245,7 @@ class PersonalForm extends Component {
             <ul className="field__question">
               <li>
                 <p className="inquest">
-                  Comment avez-vous su que le PFP existe?
-                  {' '}
-                  <span className="important">*</span>
-                  :
+                  Comment avez-vous su que le PFP existe?:
                 </p>
               </li>
               <li>
@@ -321,14 +300,14 @@ class PersonalForm extends Component {
                 </li>
                 <li>
                   <p className="conditions">
-                    J'ai pris connaissance et accepte les règles du PFP Club.
+                    J&apos;ai pris connaissance et accepte les règles du PFP Club.
                   </p>
                 </li>
               </ul>
             </div>
           </li>
           <li>
-            <p className="conditions">Acceptation de l'utilisation des données privées *</p>
+            <p className="conditions">Acceptation de l&apos;utilisation des données privées</p>
           </li>
           <li>
             <div>
@@ -338,7 +317,7 @@ class PersonalForm extends Component {
                 </li>
                 <li>
                   <p className="conditions">
-                    J’accepte que mes données personnelles soient traitées à des
+                    J&apos;accepte que mes données personnelles soient traitées à des
                     fins de marketing direct et pour recevoir les offres promotionnelles
                     des partenaires du PFP Club
                   </p>
