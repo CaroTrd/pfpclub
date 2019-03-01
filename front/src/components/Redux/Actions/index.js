@@ -1,7 +1,19 @@
-// ambassadors
+/* eslint-disable func-names */
+// Category partners
 
-const ambassadorsReducer = info => ({
-  type: 'AMBASSADOR',
-  payload: info,
+export const savedCategoryAction = Category => ({
+  type: 'CATEGORY',
+  payLoad: Category,
 });
-export default ambassadorsReducer;
+
+export const savedSearchAction = Search => ({
+  type: 'SEARCH',
+  payLoad: Search,
+});
+
+// Partenaires footer
+
+export const fetchPartners = partners => ({
+  type: 'FETCH_PLATINIUM',
+  payload: partners,
+});
