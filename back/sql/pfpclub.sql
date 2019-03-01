@@ -53,10 +53,24 @@ CREATE TABLE `partners` (
 	`affiliation_date` DATE NOT NULL,
 	`affiliation_end_date` DATE NOT NULL,
 	`company_id` int NOT NULL,
+<<<<<<< HEAD
+<<<<<<< HEAD
+	`partnership_type` int(10) NOT NULL,
+	offer text,
+	FOREIGN KEY (`company_id`) REFERENCES `companies`(`company_id`),
+	FOREIGN KEY (`partnership_type`) REFERENCES `partners_types`(`partnership_type_id`),
+=======
+	`partnership_type_id` int(10) NOT NULL,
+	`offer` text,
+	FOREIGN KEY (`company_id`) REFERENCES `companies`(`company_id`),
+	FOREIGN KEY (`partnership_type_id`) REFERENCES `partners_types`(`partnership_type_id`),
+>>>>>>> 58015d7a93bc6ef588833188568ef5f10628c2c7
+=======
 	`partnership_type` int(10) NOT NULL,
 	`offer` text,
 	FOREIGN KEY (`company_id`) REFERENCES `companies`(`company_id`),
 	FOREIGN KEY (`partnership_type`) REFERENCES `partners_types`(`partnership_type_id`),
+>>>>>>> d9727dbb92e47ed0c4e72fefce15bc796cb12d61
 	PRIMARY KEY (`partner_id`)
 );
 
@@ -104,6 +118,13 @@ CREATE TABLE `categories` (
 );
 
 CREATE TABLE `companies_categories` (
+<<<<<<< HEAD
+	`category_id` int NOT NULL AUTO_INCREMENT,
+	`company_id` int NOT NULL,
+	FOREIGN KEY (`category_id`) REFERENCES `categories`(`category_id`),
+	FOREIGN KEY (`company_id`) REFERENCES `companies`(`company_id`),
+	PRIMARY KEY (`category_id`)
+=======
 	`companies_categories_id` int NOT NULL AUTO_INCREMENT,
 	`category_id` int NOT NULL,
 	`company_id` int NOT NULL,
@@ -116,8 +137,13 @@ CREATE TABLE `media` (
   `id` int(11) NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `article` text NOT NULL,
+<<<<<<< HEAD
+  `media` varchar(512) NOT NULL
+>>>>>>> 58015d7a93bc6ef588833188568ef5f10628c2c7
+=======
   `media` varchar(512) NOT NULL,
   PRIMARY KEY (`id`)
+>>>>>>> d9727dbb92e47ed0c4e72fefce15bc796cb12d61
 );
 
 use pfpclub;

@@ -1,6 +1,6 @@
-/* eslint-disable class-methods-use-this */
 /* eslint-disable no-script-url */
 /* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './logo.svg';
@@ -10,13 +10,13 @@ import Home from './components/Home/index';
 import Presentation from './components/Presentation/index';
 import QuisommesNous from './components/Presentation/QuiSommesNous/index';
 import ConseilAdministration from './components/Presentation/ConseilAdministration/index';
-/* import Ambassadors from './components/Ambassadeurs/index'; */
+import Ambassadors from './components/ambassadeurs/index';
 import Inscription from './components/Members/index';
 import Partners from './components/Partners/index';
 /* import Events from './components/Events/index';
 import Media from './components/Media/index'; */
 import Contact from './components/Contact/index';
-/* import Hobby from './components/Ambassadeur/hobby'; */
+import Hobby from './components/ambassadeur/hobby';
 
 
 class App extends Component {
@@ -49,8 +49,8 @@ class App extends Component {
               <Route exact path="/presentation" component={Presentation} />
               <Route path="/qui-sommes-nous" component={QuisommesNous} />
               <Route path="/le-conseil-d'administration" component={ConseilAdministration} />
-              {/* <Route path="/ambassadeur" component={Ambassadors} />
-              <Route path="/hobby/:hobby_id" component={Hobby} /> */}
+              <Route path="/ambassadeur" component={Ambassadors} />
+              <Route path="/hobby/:hobby_id" component={Hobby} />
               <Route path="/members" component={Inscription} />
               <Route path="/partners" component={Partners} />
               {/* <Route path="/events" component={Events} />

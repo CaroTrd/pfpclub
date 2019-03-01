@@ -18,6 +18,7 @@ app.use(express.static(__dirname  +  '/public'));
 app.use('/api/members', membersRoutes);
 app.use('/api/partners', partnersRoutes);
 app.use('/api/contact', contactRoutes);
+app.use('/api/ambassadors', ambassadorRoutes);
 
 server.listen( process.env.PORT  ||  4000, function(){
     console.log('Listening on port '  +  server.address().port);
