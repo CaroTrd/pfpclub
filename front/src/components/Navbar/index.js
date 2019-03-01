@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import './index.scss';
 import '../../assets/styles/typo.scss';
-/* import logoNav from '../../assets/images/logo-nav.svg'; */
+import logoNav from '../../assets/images/logo-nav.svg';
 
 class Navbar extends Component {
   constructor(props) {
@@ -54,7 +54,7 @@ class Navbar extends Component {
             <li className="navbar__list__item"><NavLink exact to="/members">Members</NavLink></li>
             <li className="navbar__list__item"><NavLink exact to="/partners">Partners</NavLink></li>
             <div className="logo-nav">
-              {/* <img src={logoNav} alt="PFP CLUB" /> */}
+              <img src={logoNav} alt="PFP CLUB" />
             </div>
             <li className="navbar__list__item"><NavLink exact to="/events">Events</NavLink></li>
             <li className="navbar__list__item"><NavLink exact to="/basecamp">Base camp</NavLink></li>

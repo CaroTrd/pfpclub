@@ -1,6 +1,8 @@
 @import '../../assets/styles/variables.scss';
-@import '../../assets/styles/typo.scss';
 
+.ambassadors-ul{
+    padding: 0;
+}
 
 .ambassador-ulC{
     display: flex;
@@ -76,4 +78,15 @@
 
 .ambassador-infoList {
     padding-left: 20px;
+}
+
+@media screen and (max-width: 515px){
+    .ambassadors-ul{
+        margin: 0 10px;
+    }
+    .ambassador-ulC{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

@@ -10,13 +10,13 @@ import Home from './components/Home/index';
 import Presentation from './components/Presentation/index';
 import QuisommesNous from './components/Presentation/QuiSommesNous/index';
 import ConseilAdministration from './components/Presentation/ConseilAdministration/index';
-import Ambassadors from './components/ambassadeurs/index';
+import Ambassadors from './components/Ambassadeurs/index';
 import Inscription from './components/Members/index';
 import Partners from './components/Partners/index';
 /* import Events from './components/Events/index';
 import Media from './components/Media/index'; */
 import Contact from './components/Contact/index';
-import Hobby from './components/ambassadeur/hobby';
+import Hobby from './components/Ambassadeur/hobby';
 
 
 class App extends Component {
