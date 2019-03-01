@@ -2,12 +2,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable class-methods-use-this */
 import React, { Component } from 'react';
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar/index';
-/* import Home from './components/Home/index';
-import Presentation from './components/Presentation/index';
+import Home from './components/Home/index';
+/* import Presentation from './components/Presentation/index';
 import QuisommesNous from './components/Presentation/QuiSommesNous/index';
 import ConseilAdministration from './components/Presentation/ConseilAdministration/index';
 import Ambassadors from './components/Ambassadeurs/index';
@@ -45,8 +45,8 @@ class App extends Component {
             </a>
             <Navbar />
             <Switch>
-              {/* <Route exact path="/" component={Home} />
-              <Route exact path="/presentation" component={Presentation} />
+              <Route exact path="/" component={Home} />
+              {/* <Route exact path="/presentation" component={Presentation} />
               <Route path="/qui-sommes-nous" component={QuisommesNous} />
               <Route path="/le-conseil-d'administration" component={ConseilAdministration} />
               <Route path="/ambassadeur" component={Ambassadors} />
