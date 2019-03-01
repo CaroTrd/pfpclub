@@ -3,7 +3,9 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
-import './index.css';
+import './index.scss';
+/* import '../../assets/styles/typo.scss';
+import logoNav from '../../assets/images/logo-nav.svg'; */
 
 class Navbar extends Component {
   constructor(props) {
@@ -44,21 +46,22 @@ class Navbar extends Component {
 
   render() {
     return (
-      <div className="navbar-container">
-        <nav className={`navbar ${this.state.scrolling ? 'navbar--fixed' : ''}`} ref={el => this.nav = el}>
+      <div id="myTopnav" className="navbar-container topnav">
+        <nav className={`navbar ${this.state.scrolling ? 'navbar--fixed logo-nav-visi' : ''}`} ref={el => this.nav = el}>
           <ul className="navbar__list">
             <li className="navbar__list__item"><NavLink exact to="/">Home</NavLink></li>
-            <li className="navbar__list__item"><NavLink exact to="/presentation">Présentation</NavLink></li>
+            <li className="navbar__list__item"><NavLink exact to="/presentation">Presentation</NavLink></li>
             <li className="navbar__list__item"><NavLink exact to="/members">Members</NavLink></li>
             <li className="navbar__list__item"><NavLink exact to="/partners">Partners</NavLink></li>
+            <div className="logo-nav">
+              {/* <img src={logoNav} alt="PFP CLUB" /> */}
+            </div>
             <li className="navbar__list__item"><NavLink exact to="/events">Events</NavLink></li>
+            <li className="navbar__list__item"><NavLink exact to="/basecamp">Base camp</NavLink></li>
             <li className="navbar__list__item"><NavLink exact to="/media">Media</NavLink></li>
             <li className="navbar__list__item"><NavLink exact to="/contact">Contact</NavLink></li>
           </ul>
         </nav>
-        <NavLink exact to="">
-          <button className="login-button" type="submit">Login</button>
-        </NavLink>
       </div>
     );
   }
