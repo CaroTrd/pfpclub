@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import { NavLink } from 'react-router-dom';
-import { getAmbassador } from '../../actions/index';
+import { getAmbassador } from '../Redux/Actions';
 
 class Hobby extends Component {
   constructor(props) {

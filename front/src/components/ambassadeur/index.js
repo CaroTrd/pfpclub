@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getAmbassador, envoiId } from '../../actions/index';
+import { getAmbassador, envoiId } from '../Redux/Actions';
 import '../../assets/styles/typo.scss';
 import './index.scss';
 
