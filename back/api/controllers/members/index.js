@@ -2,9 +2,37 @@ const connexion = require('../../connexions/db');
 var express = require('express');
 var membersRoutes = express.Router();
 require('dotenv').config();
-/* var api_key = `${process.env.REACT_MAILGUN_API_KEY}`;
+var api_key = `${process.env.REACT_MAILGUN_API_KEY}`;
 var domain = `${process.env.REACT_MAILGUN_DOMAIN}`;
-var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain }); */
+var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
+
+// Get Member on page Home
+
+membersRoutes.get('/newmembers', function(req, res){
+  connexion.query('SELECT member_id, first_name, last_name, text, pictures FROM `members` WHERE member_status=1 AND affiliation_date >= NOW() - INTERVAL 1 MONTH', function (err, results){
+    if(err) {
+      console.log(err)
+      res.status(500).send(err)
+    } else {
+      console.log(results)
+      res.status(200).json(results)
+    }
+  })
+});
+
+// Get list of TVA on database
+
+membersRoutes.get('/vatnumbr', function(req, res){
+  connexion.query('SELECT name, legal_form, manager, vat_numbr, email, phone, address, city, municipality, zip_code FROM companies', function (err, results){
+    if(err) {
+      console.log(err)
+      res.status(500).send(err)
+    } else {
+      console.log(results)
+      res.status(200).json(results)
+    }
+  })
+});
 
 // Member registration forms
 

@@ -10,12 +10,16 @@ CREATE TABLE `members` (
 	`municipality` varchar(90) NOT NULL,
 	`zip_code` varchar(16) NOT NULL,
 	`country` varchar(50) NOT NULL,
+	`text` text NOT NULL,
+  	`pictures` varchar(512) NOT NULL,
+	`source` VARCHAR(200) NULL,
+	`rules` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
+	`private_data` tinyint(1) NULL DEFAULT '0',
 	`affiliation_date` DATETIME NOT NULL DEFAULT NOW(),
 	`affiliation_end_date` DATE,
 	`member_status` tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
 	PRIMARY KEY (`member_id`)
 );
-
 
 CREATE TABLE `companies` (
 	`company_id` int NOT NULL AUTO_INCREMENT,
@@ -28,11 +32,12 @@ CREATE TABLE `companies` (
 	`city` varchar(150) NOT NULL,
 	`municipality` varchar(90) NOT NULL,
 	`zip_code` varchar(16) NOT NULL,
-	`country` varchar(50) NOT NULL,
-	`website` varchar(100) NOT NULL UNIQUE,
-	description text,
-	`logo` varchar(200) NOT NULL,
+	`country` varchar(50) NULL,
+	`website` varchar(100) NULL UNIQUE,
+	`description` text,
+	`logo` varchar(512) NULL,
 	`company_status` tinyint(1) NOT NULL DEFAULT '0',
+	FOREIGN KEY (`legal_form_id`) REFERENCES `legal_form`(`legal_form_id`),
 	PRIMARY KEY (`company_id`)
 );
 
@@ -48,10 +53,10 @@ CREATE TABLE `partners` (
 	`affiliation_date` DATE NOT NULL,
 	`affiliation_end_date` DATE NOT NULL,
 	`company_id` int NOT NULL,
-	`partnership_type_id` int(10) NOT NULL,
+	`partnership_type` int(10) NOT NULL,
 	`offer` text,
 	FOREIGN KEY (`company_id`) REFERENCES `companies`(`company_id`),
-	FOREIGN KEY (`partnership_type_id`) REFERENCES `partners_types`(`partnership_type_id`),
+	FOREIGN KEY (`partnership_type`) REFERENCES `partners_types`(`partnership_type_id`),
 	PRIMARY KEY (`partner_id`)
 );
 
@@ -111,7 +116,8 @@ CREATE TABLE `media` (
   `id` int(11) NOT NULL,
   `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `article` text NOT NULL,
-  `media` varchar(512) NOT NULL
+  `media` varchar(512) NOT NULL,
+  PRIMARY KEY (`id`)
 );
 
 use pfpclub;
