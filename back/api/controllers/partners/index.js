@@ -8,7 +8,7 @@ partnersRoutes.get('/partners-level', function (req, res, next) {
   connexion.query(
     `SELECT name, logo, partner_id, partnership_type FROM partners AS pa 
     JOIN partners_types AS pt ON pt.partnership_type_id=pa.partnership_type 
-    JOIN companies AS co ON co.company_id = pa.company_id WHERE partner_status = 1`,
+    JOIN companies AS co ON co.company_id = pa.company_id WHERE company_status = 1`,
     (err, results) => {
       if (err) {
         console.log(err);

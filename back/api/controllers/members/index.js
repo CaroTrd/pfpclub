@@ -9,11 +9,11 @@ var membersRoutes = express.Router();
 // Member registration forms
 
 
-//Get Member on page Home
+// Get Member on page Home
 
-membersRoutes.get('/newmembers', function (req, res) {
-  connexion.query('SELECT member_id, first_name, last_name, text, pictures FROM `members` WHERE member_status=1 AND affiliation_date >= NOW() - INTERVAL 1 MONTH', function (err, results) {
-    if (err) {
+membersRoutes.get('/newmembers', function(req, res){
+  connexion.query('SELECT member_id, first_name, last_name, text, pictures FROM `members` WHERE member_status=1 AND affiliation_date >= NOW() - INTERVAL 1 MONTH', function (err, results){
+    if(err) {
       console.log(err)
       res.status(500).send(err)
     } else {

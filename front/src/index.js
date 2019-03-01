@@ -1,15 +1,21 @@
-/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './App.css';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './components/Redux/Store/index';
 import './index.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root'),
 );
 
