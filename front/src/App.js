@@ -53,7 +53,7 @@ class App extends Component {
               <Route path="/hobby/:hobby_id" component={Hobby} />
               <Route path="/members" component={Inscription} />
               <Route path="/partners" component={Partners} />
-              {/* <Route path="/events" component={Events} />
+              <Route path="/events" component={Events} />
               <Route path="/basecamp" component={BaseCamp} />
               <Route path="/media" component={Media} />
               <Route exact path="/contact" component={Contact} /> */}

@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 import './index.scss';
-/* import '../../assets/styles/typo.scss';
-import logoNav from '../../assets/images/logo-nav.svg'; */
+import '../../assets/styles/typo.scss';
+/* import logoNav from '../../assets/images/logo-nav.svg'; */
 
 class Navbar extends Component {
   constructor(props) {
