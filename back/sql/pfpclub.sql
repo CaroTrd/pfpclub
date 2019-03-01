@@ -115,4 +115,3 @@ CREATE TABLE `media` (
 );
 
 use pfpclub;
-
