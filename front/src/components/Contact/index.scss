@@ -1,0 +1,203 @@
+@import '../../assets/styles/variables.scss';
+
+// Popup message d'envoie
+
+.popup {
+    position:fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 80vw;
+    height:80vh;
+    text-align:center;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 9;
+}
+
+.popup h1 {
+    font-size: 2em;
+    color: black;
+    font-weight: 100;
+} 
+
+.flex-container {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+}
+
+.message {
+    margin: 1em;
+    background-color: #F7F7F7;
+    border-radius: 20px;
+    width: 10%;
+    height: 100%;
+    
+}
+
+.popup p {
+    color: black;
+    padding: 3px;
+}
+
+.popup .closewindow {
+    position: fixed;
+    bottom: 10%;
+    display: flex;
+    justify-content: center;
+    height: 5%;
+    width: 5%;
+    color: black;
+    border-color: black;
+}
+ 
+.close {
+ display:none;
+ 
+ }
+
+ // design page
+
+ .contact-label div:nth-child(1){
+    margin-top: 0;
+}
+
+ #contact-container-form{
+     display: flex;
+     justify-content: space-around;
+     flex-wrap: wrap;
+     padding-top: 1em;
+     padding-bottom: 4em;
+ }
+
+
+.cor {
+    border: 10px solid transparent;
+    position: relative;
+    &:before,
+    &:after {
+      content: "";
+      width: 65px;
+      height: 65px;
+      border: solid 1.5px #dbc4a2;
+      position: absolute;
+    }
+    &:before {
+      border-bottom: transparent;
+      border-right: transparent;
+      top: -10px;
+      left: -10px;
+      margin-right: 10px;
+    }
+    &--right:after {
+        border-top: transparent;
+        border-left: transparent;
+        bottom: -10px;
+        right: -10px;
+        margin-left: 10px;
+    }
+  }
+
+.wimg {
+    width: 100%;
+    height: 300px;
+    max-width: 300px !important;
+}
+
+.contact-form {
+    text-align: left;
+
+}
+
+.contact-para{
+    padding-top: 1.5em;
+}
+
+.container-contact{
+    
+}
+
+ .contact__element{
+     display: flex;
+     align-self: center;
+     margin: 2em 0px 0px 0px;
+     justify-content: center;
+    align-items: center;
+    font-size: 18px;
+ }
+
+ .contact__element div{
+    margin: 0!important;
+}
+
+.contact__element div input{
+    border: solid 1px #AA723B;
+    padding: 10px;
+}
+ .contact__element span{
+    padding-right: 30px;
+    width: 100px;
+}
+
+.contact-button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    padding: 1em 2em;
+    height: 60px;
+    background-color: #AA723B;
+    border: solid 1px #FFFFFF;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.style-button-text{
+    font-family: $title-font;
+    font-size: 20px;
+    color: #FBF6F6;
+}
+
+.person-infos-contact{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.infor-data{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+    padding: O 2em;
+}
+
+
+@media screen and (max-width: 800px) {
+    #contact-container-form{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contact-form{
+        width: 90%;
+        margin-top: 1.5em;
+        padding: 0;
+    }
+    .person-infos-contact{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cor{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2em;
+    }
+}
