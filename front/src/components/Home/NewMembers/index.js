@@ -28,6 +28,7 @@ class NewMember extends Component {
   }
 
   render() {
+    console.log(this.state.members)
     return (
       <div>
         <div className="container_member">

@@ -8,9 +8,6 @@ var api_key = `${process.env.REACT_MAILGUN_API_KEY}`;
 var domain = `${process.env.REACT_MAILGUN_DOMAIN}`;
 var mailgun = require('mailgun-js')({ apiKey: api_key, domain: domain });
 
-contactRoutes.use(cors())
-contactRoutes.use(bodyParser())
-
 contactRoutes.post('/message', (req, res, next) => {
   let name = req.body.namecontact;
   let email = req.body.emailcontact;
